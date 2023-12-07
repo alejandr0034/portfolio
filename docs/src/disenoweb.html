@@ -1,0 +1,213 @@
+<!doctype html>
+<html>
+
+<head>
+    <!-- ... -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- tailwind cdn -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="/assets/css/main.css">
+    <!-- alpine js cdn -->
+    <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
+    <!-- font awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body class="antialiased bg-gray-100">
+
+    <header>
+        <div class="w-full text-gray-700 bg-white">
+            <div x-data="{ open: false }"
+                class="flex flex-col max-w-screen-xl px-4 mx-auto md:items-center md:justify-between md:flex-row md:px-6 lg:px-8">
+                <div class="flex flex-row items-center justify-between">
+                    <a href="main.html"
+                        class="font-bold tracking-widest text-gray-900 focus:outline-none focus:shadow-outline p-4">
+    
+                        <h3 class="text-3xl">alejandroloaiza<span class="text-orange-600">.</span></h3>
+                    </a>
+                    <button class="rounded-lg md:hidden focus:outline-none focus:shadow-outline" @click="open = !open">
+                        <svg fill="currentColor" viewBox="0 0 20 20" class="w-6 h-6">
+                            <path x-show="!open" fill-rule="evenodd"
+                                d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM9 15a1 1 0 011-1h6a1 1 0 110 2h-6a1 1 0 01-1-1z"
+                                clip-rule="evenodd"></path>
+                            <path x-show="open" fill-rule="evenodd"
+                                d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
+                                clip-rule="evenodd"></path>
+                        </svg>
+                    </button>
+                </div>
+                <nav :class="{'flex': open, 'hidden': !open}"
+                    class="flex-col flex-grow hidden pb-4 md:pb-0 md:flex md:justify-end md:flex-row">
+                    <a class="px-4 py-2 mt-2 text-sm font-semibold text-gray-900 bg-gray-200 rounded-lg md:mt-0 hover:text-orange-600 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline"
+                        href="blog.html">Blog</a>
+                    <a class="px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg md:mt-0 md:ml-4 hover:text-orange-600 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline"
+                        href="portfolio.html">Portafolio</a>
+                    <a class="px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg md:mt-0 md:ml-4 hover:text-orange-600 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline"
+                        href="acerca.html">Sobre mi</a>
+                    <a class="px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg md:mt-0 md:ml-4 hover:text-orange-600 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline"
+                        href="contacto.html">Contacto</a>
+                    <div @click.away="open = false" class="relative" x-data="{ open: false }">
+                        <button @click="open = !open"
+                            class="flex flex-row items-center w-full px-4 py-2 mt-2 text-normal font-semibold text-left bg-transparent rounded-lg md:w-auto md:inline md:mt-0 md:ml-4 hover:text-orange-600 focus:text-gray-800 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline">
+                            Servicios
+                            <svg fill="currentColor" viewBox="0 0 20 20" :class="{'rotate-180': open, 'rotate-0': !open}"
+                                class="inline w-4 h-4 mt-1 ml-1 transition-transform duration-200 transform md:-mt-1">
+                                <path fill-rule="evenodd"
+                                    d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                                    clip-rule="evenodd"></path>
+                            </svg>
+                        </button>
+                        <div x-show="open" x-transition:enter="transition ease-out duration-100"
+                            x-transition:enter-start="transform opacity-0 scale-95"
+                            x-transition:enter-end="transform opacity-100 scale-100"
+                            x-transition:leave="transition ease-in duration-75"
+                            x-transition:leave-start="transform opacity-100 scale-100"
+                            x-transition:leave-end="transform opacity-0 scale-95"
+                            class="absolute right-0 w-full mt-2 origin-top-right rounded-md shadow-lg md:w-48 z-30">
+                            <div class="px-2 py-2 bg-white rounded-md shadow dark-mode:bg-gray-700">
+                                <a class="block px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg dark-mode:bg-transparent md:mt-0 hover:text-orange-600 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline"
+                                    href="tu-web-en-96-horas.html" target="_blank">Tu web en 96 horas</a>
+                                <a class="block px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg md:mt-0 hover:text-orange-600 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline"
+                                    href="disenoweb.html">Diseño web</a>
+                                <a class="block px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg  md:mt-0 hover:text-orange-600 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline"
+                                    href="">Tienda online</a>
+                            </div>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+        </div>
+    </header>
+    
+
+    
+
+    <!-- feature content -->
+    <section
+        class="container grid grid-cols-1 gap-20 px-5 py-24 mx-auto lg:px-16 xl:px-24 md:grid-cols-2 lg:grid-cols-3 mt-16 bg-auto">
+        <div>
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"
+                class="w-12 h-12 mb-4 text-purple-700" aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
+            </svg>
+            <h3 class="mb-3 text-lg font-medium leading-tight text-gray-900">Ahorra tiempo y dinero</h3>
+            <p class="text-base leading-relaxed text-gray-700">
+                Aprender a crear una (buena) web puede tomarte meses. Yo te ofrezco tener la tuya propia en 20 dias.
+            </p>
+        </div>
+        <div>
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"
+                class="w-12 h-12 mb-4 text-purple-700" aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    d="M17.657 18.657A8 8 0 016.343 7.343S7 9 9 10c0-2 .5-5 2.986-7C14 5 16.09 5.777 17.656 7.343A7.975 7.975 0 0120 13a7.975 7.975 0 01-2.343 5.657z" />
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    d="M9.879 16.121A3 3 0 1012.015 11L11 14H9c0 .768.293 1.536.879 2.121z" />
+            </svg>
+            <h3 class="mb-3 text-lg font-medium leading-tight text-gray-900">Potencia tu marca personal</h3>
+            <p class="text-base leading-relaxed text-gray-700">
+                Tu web sera unica. No sera igual al resto de webs que veras por ahi, que parecen todas iguales. Y
+                que estara lista para posicionarte en Internet y convertirte en referente de tu sector.
+            </p>
+        </div>
+        <div>
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"
+                class="w-12 h-12 mb-4 text-purple-700" aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    d="M8 4H6a2 2 0 00-2 2v12a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-2m-4-1v8m0 0l3-3m-3 3L9 8m-5 5h2.586a1 1 0 01.707.293l2.414 2.414a1 1 0 00.707.293h3.172a1 1 0 00.707-.293l2.414-2.414a1 1 0 01.707-.293H20" />
+            </svg>
+            <h3 class="mb-3 text-lg font-medium leading-tight text-gray-900">Disfruta de los extras</h3>
+            <p class="text-base leading-relaxed text-gray-700">
+                Optimizacion WPO (Web Performance Optimization), Capa de Seguridad Extra, Candado Verde. Una web a
+                prueba de balas.
+            </p>
+        </div>
+    </section>
+    <!-- end feature content -->
+
+    <!-- por que elegirme como diseñador web seccion -->
+    <section>
+        <div class="w-full">
+            <div class="flex flex-wrap mx-auto mb-16">
+                <div class="grid grid-cols-1 md:grid-cols-1 text-center bg-gray-100 dark:bg-gray-800">
+    
+                    <div class="lg:mb-0 pb-12 lg:pb-0 border-b lg:border-b-0 p-16">
+    
+                        <h2 class="mt-12 text-5xl text-base text-gray-700 font-bold text-center">
+                            ¿Por qué elegirme como diseñador web?
+                        </h2>
+                        <h4 class="text-normal text-2xl text-gray-600 font-ligthter">Puedo ayudarte a triunfar en la Web
+                        </h4>
+                        <span class="inline-block h-1 w-10 rounded bg-red-500 mt-8 mb-6"></span>
+                        <p
+                            class="text-lg sm:text-xl leading-loose font-semibold text-left text-gray-600 dark:text-gray-300 justify-between mt-8">
+                            Me apuesto algo contigo a que haz llegado a mi web a traves de Google. Que me hayas
+                            encontrado no ha sido una casualidad. Se diseñar páginas que posicionan bien y que atraen
+                            clientes sin tener que ir a buscarlos.
+                        </p>
+    
+                        <p
+                            class="text-normal text-lg sm:text-xl leading-loose font-medium text-left text-gray-600 dark:text-gray-300 justify-between mt-5">
+                            ¿Has leído alguna entrada de mi blog? Si es así habrás visto que sé de lo que hablo.
+                            LLevo años programando y se casi todo lo que hay que saber para hacer paginas web dinamicas,
+                            sistemas web.
+                        </p>
+    
+                        <p
+                            class="text-normal text-lg sm:text-xl leading-loose font-medium text-left text-gray-600 dark:text-gray-300 justify-between mt-5">
+                            Con mis clientes no solo me limito a programar su sitio web o aplicacion, sino que tambien:
+    
+                        <ul
+                            class="mt-3 mb-8 list-inside list-disc text-normal text-lg sm:text-xl leading-loose font-medium text-left text-gray-600 dark:text-gray-300 justify-between p-4">
+                            <li>Aporto toda mi experiencia y habilidad. Yo tambien empece desde cero.</li>
+                            <li>Ayudo a potenciar su marca personal.</li>
+                            <li>Ayudo a ganar visibilidad y pocisionarse mejor en su sector.</li>
+                            <li>Ayudo a transmitir confianza, un requisito fundamental para triunfar en Internet.</li>
+                            <li>Ayudo a desarrollar un sitio web que genere visitas, eso significa mas trafico y por
+                                ende mas clientes.</li>
+                            <li>Aporto ideas para que su negocio sea mas rentable.</li>
+                            <li>Les guio en su estrategia online.</li>
+                            <li>Reviso sus contenidos para que transmitan valores positivos</li>
+                            <li>Digo las cosas claras, si veo que su enfoque no les va a llevar a ninguna parte.</li>
+                        </ul>
+                        </p>
+    
+                        <p
+                            class="text-normal text-lg sm:text-xl leading-loose font-medium text-left text-gray-600 dark:text-gray-300 justify-between">
+                            Lo que te ofrezco si decides contratarme es una relación de confianza en la que te escucho,
+                            opino, asesoro y llevo la contraria si lo creo necesario.
+                        </p>
+    
+                        <p
+                            class="text-normal text-lg sm:text-xl leading-loose font-medium text-left text-gray-600 dark:text-gray-300 justify-between mt-5">
+                            Siempre con el objetivo último de que tu presencia en Internet sea verdaderamente rentable
+                            para ti.
+                        </p>
+    
+                        <p
+                            class="text-normal text-lg sm:text-xl leading-loose font-medium text-left text-gray-600 dark:text-gray-300 justify-between mt-5 mb-8">
+                            Si tienes ganas de comerte el mundo, pero no sabes por dónde empezar has llegado al lugar
+                            indicado.
+                        </p>
+    
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+
+    <!-- All components in one -->
+    <script src="https://cdn.jsdelivr.net/npm/kutty@latest/dist/kutty.min.js"></script>
+    <!-- Single component -->
+    <!-- Include AlpineJS first -->
+    <script src="https://cdn.jsdelivr.net/npm/kutty@latest/dist/alpinejs.min.js"></script>
+    <!-- And then the single component -->
+    <script src="https://cdn.jsdelivr.net/npm/kutty@latest/dist/dropdown.min.js"></script>
+
+</body>
+
+</html>

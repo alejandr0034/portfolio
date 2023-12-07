@@ -1,0 +1,66 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body{
+    font-family: 'Work Sans', serif;
+    font-weight: 400;
+    font-size: 15px;
+  }
+  
+  h1{
+    font-family: 'Hind', sans-serif;
+    font-weight: 800;
+    line-height: 1.4em;
+    color: #241f33;
+  }
+  
+  h2{
+    font-family: 'Sora', serif;
+    font-weight: 600;
+  }
+  
+  h3{
+    font-family: 'Hind', sans-serif;
+    font-weight: 900;
+    font-size: 46px;
+    text-decoration: none;
+  }
+  
+  h4{
+    font-family: 'Sora', serif;
+    font-weight: 400;
+  }
+  
+  h5{
+    font-family: 'Hind', sans-serif;
+    font-weight: 600;
+    color: #241f33;
+    text-decoration: none;
+  }
+  
+  h6{
+    font-family: 'Hind', sans-serif;
+    font-weight: 600;
+    color: #241f33;
+    text-decoration: none;
+  }
+  
+  .subtitle{
+    font-family: 'Alex Brush', cursive;
+  }
+  
+  p{
+    font-family: 'Work Sans', serif;
+    font-size: 16px;
+  }
+  
+  a:hover{
+    color: #4169e1;
+  }
+  
+  .font-noto{
+    font-family: "Noto Serif", serif;
+    font-weight: 400;
+    font-size: 28px;
+  }

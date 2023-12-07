@@ -1,0 +1,1063 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <!-- ... -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- tailwind cdn -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="/dist/output.css" rel="stylesheet" />
+    <link href="https://unpkg.com/pattern.css" rel="stylesheet">
+    <style>
+        @import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;600;700&display=swap");
+        @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,900");
+
+        
+        @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@200;300;400;500;600;700&family=Roboto:wght@300;400;500;700;900&display=swap');
+
+
+        .font-nunito {
+            font-family: "Nunito Sans", sans-serif;
+        }
+
+        .font-monserrat {
+            font-family: "Montserrat", sans-serif;
+        }
+
+        .font-roboto{
+            font-family: 'Roboto', sans-serif;
+        }
+
+        .font-roboto-mono{
+            font-family: 'Roboto Mono', monospace;
+        } 
+
+        p {
+            margin-bottom: 1rem;
+            line-height: 1.5;
+        }
+
+        [x-cloak] {
+            display: none;
+        }
+    </style>
+
+</head> 
+<body class="bg-white dark:bg-gray-800">
+    <div class="w-full bg-white dark:bg-gray-800 font-monserrat overflow mx-auto"> 
+        <!-- header section  -->
+        <header class="hidden h-24 sm:h-32 items-center z-30 w-full">
+            <div class="container mx-auto px-6 flex items-center justify-between">
+                <div class="text-gray-800 dark:text-white font-black text-3xl flex items-center">
+                    <span class="text-2xl font-semibold text-gray-700 md:text-3xl">
+                        <a href="index.html">
+                            <span class="text-blue-600">alejandro</span>loaiza
+                        </a>
+                    </span>
+                </div>
+                <div class="flex items-center">
+                    <nav class="font-sen text-gray-800 dark:text-white text-lg lg:flex items-center hidden">
+                        <a href="about-me.html" class="py-2 px-6 flex hover:text-blue-600 text-base">
+                            sobre mi
+                        </a>
+                        <a href="#" class="hidden py-2 px-6 flex hover:text-red-500">
+                            servicios
+                        </a>
+                        <a href="contact.html" class="py-2 px-6 flex bg-transparent text-gray-500 focus:ring-red-400 focus:ring-offset-red-200 transition ease-in duration-200 text-center text-base font-semibold shadow-md focus:outline-none focus:ring-2 focus:ring-offset-2 border-2 border-blue-600 text-gray-800 dark:text-white hover:bg-transparent hover:text-blue-600 focus:ring-yellow-300 focus:ring-offset-yellow-200 transition ease-in duration-200 text-center text-base font-semibold shadow-md focus:outline-none focus:ring-2 focus:ring-offset-2 rounded-sm">
+                            contacto
+                        </a>
+                    </nav>
+                    <button class="lg:hidden flex flex-col ml-4">
+                        <span class="w-6 h-1 bg-gray-800 dark:bg-white mb-1">
+                        </span>
+                        <span class="w-6 h-1 bg-gray-800 dark:bg-white mb-1">
+                        </span>
+                        <span class="w-6 h-1 bg-gray-800 dark:bg-white mb-1">
+                        </span>
+                    </button>
+                </div>
+            </div>
+        </header>
+        <!-- end header section -->
+
+        <!-- feature-section -->
+        <div class="py-16 flex">
+            <div class="container m-auto px-6">
+                <div class="lg:flex justify-between items-center text-gray-700">
+                    <div class="lg:w-5/12">
+                        <img src="https://images.unsplash.com/photo-1542435503-956c469947f6?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=967&q=80"
+                            style="
+                  transform: scale(1) perspective(1040px) rotateY(-11deg)
+                    rotateX(2deg) rotate(2deg);
+                " alt="" class="rounded" />
+                    </div>
+                    <div class="lg:w-6/12 lg:p-0 p-7 order-2">
+                        <dl class="leading-tight text-sm uppercase">
+                            Servicio
+                        </dl>
+                        <h1 class="text-7xl font-extrabold leading-tight mb-5 uppercase">
+                            Tu web en 96 horas
+                        </h1>
+                        <dd class="text-lg">
+                            Por solo 249.900CLP. Te la entrego en un plazo de 96 horas. Con mas de
+                            <strong class="font-semibold">100.000CLP en extras.</strong>
+                        </dd>
+                        <div class="py-5">
+                            <a href="#" onclick="document.getElementById('pricing').scrollIntoView({ behavior: 'smooth' });return false;" class="inline-flex justify-center items-center space-x-3 border font-semibold focus:outline-none px-5 py-3 leading-6 rounded bg-gray-200 text-blue-600 hover:text-blue-700 hover:bg-gray-200 hover:border-blue-700 focus:ring focus:ring-yellow-300 focus:ring-opacity-50 active:bg-transparent transition ease-out duration-100">
+                                <span>Contratar - $249.900CLP</span>
+                            </a>
+                            <a href="#" class="inline-flex justify-center items-center space-x-3 font-semibold focus:outline-none px-5 py-3 ml-3 leading-6 rounded border-gray-200 bg-gray-100 text-gray-800 hover:text-gray-900 hover:bg-gray-200 hover:border-gray-200 focus:ring focus:ring-gray-300 focus:ring-opacity-25 active:bg-gray-200 transition ease-out duration-100">
+                                <svg class="hi-solid hi-eye inline-block w-5 h-5 opacity-50" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M10 12a2 2 0 100-4 2 2 0 000 4z"></path><path fill-rule="evenodd" d="M.458 10C1.732 5.943 5.522 3 10 3s8.268 2.943 9.542 7c-1.274 4.057-5.064 7-9.542 7S1.732 14.057.458 10zM14 10a4 4 0 11-8 0 4 4 0 018 0z" clip-rule="evenodd"></path></svg>
+                                <span class="hover:text-blue-600">Ver plantillas</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- features section -->
+        <div class="w-full top-0">
+            <section class="flex bg-gray-100 py-16 px-16 mx-auto">
+                <dl class="space-y-10 md:space-y-0 md:grid md:grid-cols-3 md:gap-x-8 md:gap-y-10">
+                    <div class="flex">
+                        <div class="flex-shrink-0">
+                            <div class="flex items-center justify-center h-12 w-12 rounded-md icon text-blue-600">
+                                <!-- Heroicon name: outline/cog -->
+                                <svg class="h-12 w-12" xmlns="http://www.w3.org/2000/svg" fill="none"
+                                    viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z" />
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="ml-4">
+                            <dt class="text-lg leading-6 font-medium  text-gray-900">
+                                Incluye mas de 200.000CLP en componentes
+                            </dt>
+                            <dd class="mt-2 text-base text-gray-700">
+                                Solo por lo que recibes en herramientas ya te merece la pena
+                                contratar este servicio.
+                            </dd>
+                        </div>
+                    </div>
+
+                    <div class="flex">
+                        <div class="flex-shrink-0">
+                            <div class="flex items-center justify-center h-12 w-12 rounded-md icon text-blue-600">
+                                <svg class="h-12 w-12" xmlns="http://www.w3.org/2000/svg" fill="none"
+                                    viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M4 5a1 1 0 011-1h14a1 1 0 011 1v2a1 1 0 01-1 1H5a1 1 0 01-1-1V5zM4 13a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H5a1 1 0 01-1-1v-6zM16 13a1 1 0 011-1h2a1 1 0 011 1v6a1 1 0 01-1 1h-2a1 1 0 01-1-1v-6z" />
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="ml-4">
+                            <dt class="text-lg leading-6 font-medium text-gray-900">
+                                Elige entre 20 plantillas Premium
+                            </dt>
+                            <dd class="mt-2 text-base text-gray-700">
+                                Elige la plantilla que mas te guste para cada pagina entre
+                                nuestras 20 plantillas exclusivas, que tenemos ya
+                                pre-configuradas, para que puedas estar en Internet lo mas
+                                pronto posible.
+                            </dd>
+                        </div>
+                    </div>
+
+                    <div class="flex">
+                        <div class="flex-shrink-0">
+                            <div class="flex items-center justify-center h-12 w-12 rounded-md icon text-blue-600">
+                                <!-- Heroicon name: outline/search -->
+                                <svg class="h-12 w-12" xmlns="http://www.w3.org/2000/svg" fill="none"
+                                    viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="ml-4">
+                            <dt class="text-lg leading-6 font-medium text-gray-900">
+                                Optimizado para Seo
+                            </dt>
+                            <dd class="mt-2 text-base text-gray-700">
+                                Te dejamos configurado el SEO y te damos de alta en las
+                                herramientas de Google.
+                            </dd>
+                        </div>
+                    </div>
+
+                    <div class="flex">
+                        <div class="flex-shrink-0">
+                            <div class="flex items-center justify-center h-12 w-12 rounded-md icon text-blue-600">
+                                <!-- Heroicon name: outline/support -->
+                                <svg class="h-12 w-12" xmlns="http://www.w3.org/2000/svg" fill="none"
+                                    viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M18.364 5.636l-3.536 3.536m0 5.656l3.536 3.536M9.172 9.172L5.636 5.636m3.536 9.192l-3.536 3.536M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-5 0a4 4 0 11-8 0 4 4 0 018 0z" />
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="ml-4">
+                            <dt class="text-lg leading-6 font-medium text-gray-900">
+                                Soporte via email por 60 dias
+                            </dt>
+                            <dd class="mt-2 text-base text-gray-700">
+                                Por si no fuera suficiente, te brindamos soporte via email
+                                durante 60 dias corridos, desde que tu pagina web este de alta
+                                en la web.
+                            </dd>
+                            <dd class="mt-2 text-base text-gray-700">
+                                Este servicio esta valorado en <strong class="hover:text-rose-500">$90.000CLP</strong>
+                            </dd>
+                        </div>
+                    </div>
+                    <div class="flex">
+                        <div class="flex-shrink-0">
+                            <div class="flex items-center justify-center h-12 w-12 rounded-md icon text-blue-600">
+                                <!-- Heroicon name: outline/color'swatch -->
+                                <svg class="h-12 w-12" xmlns="http://www.w3.org/2000/svg" fill="none"
+                                    viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zm0 0h12a2 2 0 002-2v-4a2 2 0 00-2-2h-2.343M11 7.343l1.657-1.657a2 2 0 012.828 0l2.829 2.829a2 2 0 010 2.828l-8.486 8.485M7 17h.01" />
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="ml-4">
+                            <dt class="text-lg leading-6 font-medium text-gray-900">
+                                Ajustes de diseño
+                            </dt>
+                            <dd class="mt-2 text-base text-gray-700">
+                                Implementamos tus colores corporativos y subimos tu logotipo
+                                para que potencies tu marca.
+                            </dd>
+                        </div>
+                    </div>
+
+                    <div class="flex">
+                        <div class="flex-shrink-0">
+                            <div class="flex items-center justify-center h-12 w-12 rounded-md icon text-blue-600">
+                                <!-- Heroicon name: outline/shield -->
+                                <svg class="h-12 w-12" xmlns="http://www.w3.org/2000/svg" fill="none"
+                                    viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="ml-4">
+                            <dt class="text-lg leading-6 font-medium text-gray-900">
+                                Ajustes de seguridad
+                            </dt>
+                            <dd class="mt-2 text-base text-gray-700">
+                                Tu web estará totalmente protegida, contra ataques maliciosos.
+                                Incluye configuraciones antispam y de backups
+                            </dd>
+                        </div>
+                    </div>
+                </dl>
+            </section>
+        </div>
+
+        <!-- content section -->
+        <section class="text-gray-800">
+            <div class="container mx-auto flex px-5 py-24 md:flex-row flex-col items-center">
+                <div class="lg:max-w-lg lg:w-full md:w-1/2 w-5/6 md:mb-0 mb-10 ">
+                    <img class="object-cover object-center rounded" alt="hero"
+                        src="/docs/assets/images/Starter-templates-3.png">
+                </div>
+                <div
+                    class="lg:flex-grow md:w-1/2 lg:pl-24 md:pl-16 flex flex-col md:items-start md:text-left items-center text-center">
+                    <h2 class="sm:text-5xl text-4xl mb-4 text-gray-800 ">Tu maravilloso y nuevo sitio web está "a la vuelta de la esquina".
+                    </h2>
+                    <dd class="mb-2 text-lg">
+                        Ponte cómodo mientras creo tu sitio web –optimizándolo 
+                        para dispositivos móviles– y lo adapto a tu negocio, siguiendo tus indicaciones y sugerencias.
+                        Por cierto, trabajo en WordPress porque es la plataforma de creación más popular y flexible que existe, 
+                        y es muy fácil ajustar o agregar cosas a tu sitio conforme crece tu negocio (también puedo ayudarte con eso).
+                    </dd>
+                </div>
+            </div>
+        </section>
+
+        <!-- details section -->
+        <div class="py-12 bg-gray-100 dark:bg-gray-800">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="lg:text-center">
+                    <dl class="text-base text-pink-700 font-semibold tracking-wide uppercase">
+                        Plantillas
+                    </dl>
+                    <h2 class="mt-2 text-5xl leading-8 tracking-tight text-gray-900 sm:text-5xl">
+                        Elige entre las 3 plantillas disponibles para que
+                        comienzes desde ya con tu sitio web.
+                    </h2>
+                    <span class="inline-block h-1 w-10 rounded bg-pink-700 mt-8 mb-4"></span>
+                    <dd class="mt-4 max-w-1xl text-gray-700 lg:mx-auto text-xl">
+                        Te ofrezco 3 plantillas por el momento. Elige las que más te
+                        gusten y me encargare de adaptar los estilos, colores y
+                        tipografías. Cuando te entregue la web, por si algo no te gusta,
+                        le podrás dar tu toque personal para dejarla 100% a tu gusto. Aquí
+                        tienes algunas plantillas disponibles.
+                    </dd>
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-12 py-10">
+                        <div class="py-5">
+                          <img class="object-cover border-8 border-white rounded-lg mb-8" src="/docs/assets/images/thumb-home-garden-decor.png" alt="Preview Helper Tool - SVG Icons">
+                          <dl class="text-lg font-bold mb-2">
+                            Home & Garden Decor
+                          </dl>
+                          <dd class="leading-relaxed text-gray-700">
+                            Contemporary decor template designed to sell home decor and garden products
+                          </dd>
+                          <a href="https://websitedemos.net/home-garden-decor-02/" target="_blank" class="inline-flex justify-center items-center space-x-2 border font-semibold focus:outline-none px-3 py-2 leading-5 text-sm rounded border-gray-200 bg-gray-200 text-gray-700 hover:text-blue-600 hover:bg-gray-300 hover:border-gray-300 focus:ring focus:ring-gray-500 focus:ring-opacity-25 active:bg-gray-200 mt-5">
+                            <span>Llevame a la demo</span>
+                            <svg class="hi-solid hi-external-link inline-block w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M11 3a1 1 0 100 2h2.586l-6.293 6.293a1 1 0 101.414 1.414L15 6.414V9a1 1 0 102 0V4a1 1 0 00-1-1h-5z"></path><path d="M5 5a2 2 0 00-2 2v8a2 2 0 002 2h8a2 2 0 002-2v-3a1 1 0 10-2 0v3H5V7h3a1 1 0 000-2H5z"></path></svg>
+                          </a>
+                        </div>
+                        <div class="py-5">
+                          <img class="object-cover border-8 border-white rounded-lg mb-8" src="/docs/assets/images/office-furniture-store.png" alt="Preview Helper Tool - Colors">
+                          <dl class="text-lg font-bold mb-2">
+                            Office Furniture Store
+                          </dl>
+                          <dd class="leading-relaxed text-gray-700">
+                            A perfect website template for those looking to start their own online furniture shop
+                          </dd>
+                          <a href="https://websitedemos.net/office-furniture-store-04/" target="_blank" class="inline-flex justify-center items-center space-x-2 border font-semibold focus:outline-none px-3 py-2 leading-5 text-sm rounded border-gray-200 bg-gray-200 text-gray-700 hover:text-blue-600 hover:bg-gray-300 hover:border-gray-300 focus:ring focus:ring-gray-500 focus:ring-opacity-25 active:bg-gray-200 mt-5">
+                            <span>Llevame a la demo</span>
+                            <svg class="hi-solid hi-external-link inline-block w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M11 3a1 1 0 100 2h2.586l-6.293 6.293a1 1 0 101.414 1.414L15 6.414V9a1 1 0 102 0V4a1 1 0 00-1-1h-5z"></path><path d="M5 5a2 2 0 00-2 2v8a2 2 0 002 2h8a2 2 0 002-2v-3a1 1 0 10-2 0v3H5V7h3a1 1 0 000-2H5z"></path></svg>
+                          </a>
+                        </div>
+                        <div class="py-5">
+                          <img class="object-cover border-8 border-white rounded-lg mb-8" src="/docs/assets/images/fiona-patisserie.png" alt="Preview Helper Tool - Button Builder">
+                          <dl class="text-lg font-bold mb-2">
+                            Fiona Patisserie
+                          </dl>
+                          <dd class="leading-relaxed text-gray-700">
+                            Light hearted WordPress food template designed to help promote and sell
+                          </dd>
+                          <a href="https://websitedemos.net/fiona-patisserie-04/" target="_blank" class="inline-flex justify-center items-center space-x-2 border font-semibold focus:outline-none px-3 py-2 leading-5 text-sm rounded border-gray-200 bg-gray-200 text-gray-700 hover:text-blue-600 hover:bg-gray-300 hover:border-gray-300 focus:ring focus:ring-gray-500 focus:ring-opacity-25 active:bg-gray-200 mt-5">
+                            <span>Llevame a la demo</span>
+                            <svg class="hi-solid hi-external-link inline-block w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M11 3a1 1 0 100 2h2.586l-6.293 6.293a1 1 0 101.414 1.414L15 6.414V9a1 1 0 102 0V4a1 1 0 00-1-1h-5z"></path><path d="M5 5a2 2 0 00-2 2v8a2 2 0 002 2h8a2 2 0 002-2v-3a1 1 0 10-2 0v3H5V7h3a1 1 0 000-2H5z"></path></svg>
+                          </a>
+                        </div>
+                    </div>
+                    <div class="flex justify-center mb-5 cursor-pointer hidden">
+                        <a href="#" class="inline-flex justify-center items-center space-x-2 border font-semibold focus:outline-none px-6 py-4 leading-5 text-sm rounded border-gray-200 bg-gray-200 text-gray-700 hover:text-gray-700 hover:bg-gray-300 hover:border-gray-300 focus:ring focus:ring-gray-500 focus:ring-opacity-25 active:bg-gray-200 mt-5">
+                            <span>Ver todas las plantillas</span>
+                            <svg class="hi-solid hi-external-link inline-block w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M11 3a1 1 0 100 2h2.586l-6.293 6.293a1 1 0 101.414 1.414L15 6.414V9a1 1 0 102 0V4a1 1 0 00-1-1h-5z"></path><path d="M5 5a2 2 0 00-2 2v8a2 2 0 002 2h8a2 2 0 002-2v-3a1 1 0 10-2 0v3H5V7h3a1 1 0 000-2H5z"></path></svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- banner section -->
+        <div class="bg-yellow-400">
+            <div class="text-center w-full mx-auto py-12 px-8 sm:px-16 sm:py-16 z-16">
+                <dl class="text-4xl font-extrabold text-blue-500 dark:text-white sm:text-6xl lg:px-auto">
+                    <span class="block">
+                        Puedes tener tu web en 4 dias por solo $249.900 pesos ¿A qué estás
+                        esperando?
+                    </span>
+                </dl>
+                <div class="lg:mt-0 lg:flex-shrink-0">
+                    <div class="mt-12 inline-flex rounded-md">
+                        <a href="#" class="inline-flex justify-center items-center space-x-2 border font-semibold focus:outline-none px-6 py-4 leading-5 text-sm rounded border-gray-200 bg-gray-200 text-gray-700 hover:text-blue-600 hover:bg-gray-300 hover:border-gray-300 focus:ring focus:ring-gray-500 focus:ring-opacity-25 active:bg-gray-200 mt-5">
+                            <span>Comprar ahora</span>
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" 
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" 
+                                    d="M3 10h18M7 15h1m4 0h1m-7 4h12a3 3 0 003-3V8a3 3 0 00-3-3H6a3 3 0 00-3 3v8a3 3 0 003 3z">
+                                </path>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- seccion en que consiste este servicio -->
+        <div class="max-w-7xl mx-auto p-4 sm:p-6 lg:p-8 bg-gray-50">
+            <div class="container flex flex-wrap mx-auto">
+                <div class="w-full text-center">
+                    <div class="mb-8 lg:mb-0 pb-12 lg:pb-0 border-b lg:border-b-0 p-12">
+                        <h2 class="mt-10 text-4xl leading-8 tracking-tight text-gray-900 sm:text-5xl">
+                            En qué consiste exactamente este servicio
+                        </h2>
+                        <span class="inline-block h-1 w-10 rounded bg-blue-600 mt-5 mb-6"></span>
+                        <dd
+                            class="text-base sm:text-xl leading-loose font-normal text-left text-gray-700 justify-between mt-8 mb-8">
+                            Mucha gente intenta hacer su propia pagina web por cuenta propia
+                            si tener idea sobre Diseño web, experiencia de usuario, etc..
+                        </dd>
+                        <dd
+                            class="text-base sm:text-xl leading-loose font-normal text-left text-gray-700 justify-between mt-8 mb-8">
+                            Y termina fracasando en su intento esperando que se vea igual a la demo que vio por ahi en algun sitio.
+                        </dd>
+
+                        <dd
+                            class="text-base sm:text-xl leading-loose font-normal text-left text-gray-700 justify-between mt-8 mb-8">
+                            Entonces recurre a contratar servicios como constructor de sitios web como wix o
+                            estos que estan de moda actualmente de tu web por solo 59.000
+                            pesos anual, la cual al cabo de un año, te sale el doble o triple, ya que
+                            el dominio y hosting son tema aparte, y que ademas de tener
+                            pocas opciones de personalización, tambien tienes que cancelar
+                            una cuota mensual o anual sea el caso, lo que a largo plazo sale
+                            mucho mas caro que haber contratado un servicio como este, ya
+                            que solo pagas una vez y despues sera tuyo por siempre.
+                           
+                        </dd>
+
+                        <dd
+                            class="inline-block border-pink-700 border-w-4 border-l-2 p-5 text-2xl sm:text-3xl leading-loose font-semibold text-left text-gray-700 justify-between mt-8 mb-8">
+                            Este servicio está diseñado para ahorrarte cientos de horas de
+                            aprendizaje y algún que otro dolor de cabeza. Tú solo tendrás
+                            que hacer la parte divertida.
+                        </dd>
+                        <dd
+                            class="text-base sm:text-xl leading-loose font-normal text-left text-gray-700 dark:text-gray-300 justify-between mt-8 mb-8">
+                            Yo me encargo de todos los ajustes técnicos, de todas las
+                            instalaciones, de darle un diseño inicial atractivo, de
+                            enseñarte a utilizarla y de hacer que subir tu contenido sea un
+                            juego de niños. Tú solo tendrás que darle tu toque personal a la
+                            web.
+                        </dd>
+                        <dd
+                            class="text-base text-lg sm:text-xl leading-loose font-normal text-left text-gray-700 justify-between mt-8 mb-8">
+                            Es perfecto para ti si solo te quieres preocupar de introducir
+                            tu contenido (textos, fotografías, vídeos, etc.) en un diseño
+                            profesional y optimizado al 100% a nivel técnico.
+                        </dd>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- seccion que incluye tu web en 96 horas -->
+        <div class="w-full sm:p-2 lg:p-4 bg-gray-100">
+            <div class="flex flex-wrap mx-auto px-5 py-6">
+                <div class="w-full text-center">
+                    <div class="mb-8 lg:mb-0 lg:pb-0 border-b lg:border-b-0 p-8">
+                        <h2 class="mt-0 text-4xl leading-8 tracking-tight text-gray-900 sm:text-5xl">
+                            Que incluye "Tu web en 96 horas"
+                        </h2>
+                        <span class="inline-block h-1 w-10 rounded bg-pink-700 mt-8 mb-8"></span>
+                        <!-- cards component -->
+                        <div class="container mx-auto mt-20 grid grid-cols-1 gap-8 md:grid-cols-2 xl:grid-cols-3 mb-12">
+                            <!-- columna 1 -->
+                            <div class="rounded-xl bg-white flex flex-col p-8">
+                                <div
+                                    class="w-16 h-16 inline-flex items-center justify-center rounded-full bg-blue-100/50 text-yellow-500 mb-5 flex-shrink-0 p-4 cursor-pointer">
+                                    <svg class="w-24 h-24" fill="none" stroke="currentColor" viewBox="0 0 24 24" 
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" 
+                                            d="M4 5a1 1 0 011-1h14a1 1 0 011 1v2a1 1 0 01-1 1H5a1 1 0 01-1-1V5zM4 13a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H5a1 1 0 01-1-1v-6zM16 13a1 1 0 011-1h2a1 1 0 011 1v6a1 1 0 01-1 1h-2a1 1 0 01-1-1v-6z">
+                                        </path>
+                                    </svg>
+                                </div>
+                                <div class="flex-grow text-gray-800">
+                                    <dd class="leading-relaxed text-sm text-justify">
+                                        <span class="text-pink-600 font-bold">Maquetacion de tu sitio web.</span>
+                                         Cada plantilla tiene 6 paginas principales. Inicio, Sobre mí, Contacto, Servicios, Landing Page y Blog. 
+                                    </dd>
+                                </div>
+                            </div>
+                            <div class="rounded-xl bg-gray-800 flex flex-col p-8">
+                                <div
+                                    class="w-16 h-16 inline-flex items-center justify-center rounded-full bg-blue-100/20 text-yellow-500 mb-5 flex-shrink-0 p-4 cursor-pointer">
+                                    <svg class="w-24 h-24" fill="none" stroke="currentColor" viewBox="0 0 24 24" 
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" 
+                                            d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zm0 0h12a2 2 0 002-2v-4a2 2 0 00-2-2h-2.343M11 7.343l1.657-1.657a2 2 0 012.828 0l2.829 2.829a2 2 0 010 2.828l-8.486 8.485M7 17h.01">
+                                        </path>
+                                    </svg>
+                                </div>
+                                <div class="flex-grow text-white">
+                                    <dd class="leading-relaxed text-sm text-left">
+                                        <span class="text-pink-500 font-bold">Logotipo y colores.</span>
+                                        Personalización de los colores de tu web y subida de tu logotipo. Podras elegir que colores deseas para tu web. 
+                                    </dd>
+                                </div>
+                            </div>
+                            <div class="rounded-xl bg-white flex flex-col p-8">
+                                <div
+                                    class="w-16 h-16 inline-flex items-center justify-center rounded-full bg-blue-100/50 mb-5 flex-shrink-0 p-4 cursor-pointer">
+                                    <svg class="h-24 w-24 text-yellow-500"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round">  
+                                        <circle cx="12" cy="12" r="10" />  <circle cx="12" cy="12" r="6" />  <circle cx="12" cy="12" r="2" />
+                                    </svg>
+                                </div>
+                                <div class="flex-grow text-gray-800">
+                                    <dd class="leading-relaxed text-sm text-left">
+                                        <strong class="text-pink-600">Optimización SEO. </strong>  
+                                        Instalación y configuración de herramientas de google, damos de alta tu sitio web en Google. Configuramos palabras clave para que tu sitio este en los primeros resultados de busqueda.
+                                    </dd>
+                                </div>
+                            </div>
+                            <!-- columna 2 -->
+                            <div class="rounded-xl bg-gray-800 flex flex-col p-8">
+                                <div
+                                    class="w-16 h-16 inline-flex items-center justify-center rounded-full bg-blue-100/20 text-yellow-500 mb-5 flex-shrink-0 p-4 cursor-pointer">
+                                    <svg class="w-24 h-24" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" 
+                                            d="M5 12h14M5 12a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v4a2 2 0 01-2 2M5 12a2 2 0 00-2 2v4a2 2 0 002 2h14a2 2 0 002-2v-4a2 2 0 00-2-2m-2-4h.01M17 16h.01" />
+                                    </svg>
+                                </div>
+                                <div class="flex-grow text-white">
+                                    <dd class="leading-relaxed text-sm text-left">
+                                        <span class="text-pink-500 font-bold">Instalacion y Configuracion.</span>
+                                        La instalación y configuración del sitio en un hosting de tu propiedad, si no tienes uno te puedo orientar que hosting comprar de acuerdo al sitio web o proyecto que eligas.
+                                    </dd>
+                                </div>
+                            </div>
+                            <div class="rounded-xl bg-white flex flex-col p-8">
+                                <div
+                                    class="w-16 h-16 inline-flex items-center justify-center rounded-full bg-blue-100/50 text-yellow-500 mb-5 flex-shrink-0 p-4 cursor-pointer">
+                                    <svg class="w-24 h-24" fill="none" stroke="currentColor" viewBox="0 0 24 24" 
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" 
+                                        d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z">
+                                        </path>
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" 
+                                            d="M15 12a3 3 0 11-6 0 3 3 0 016 0z">
+                                        </path>
+                                    </svg>
+                                </div>
+                                <div class="flex-grow text-gray-800">
+                                    <dd class="leading-relaxed text-sm text-left">
+                                       <strong class="text-pink-600">Configuracion segura del sitio.</strong>                     
+                                        Enlaces y archivos protegidos. Configuracion del sitio para repeler ataques maliciosos, evitar spam y restaurar tu web en caso de desastre.
+                                    </dd>
+                                </div>
+                            </div>
+                            <div class="rounded-xl bg-gray-800 flex flex-col p-8">
+                                <div
+                                    class="w-16 h-16 inline-flex items-center justify-center rounded-full bg-blue-100/20 mb-5 flex-shrink-0 p-4 cursor-pointer">
+                                    <svg class="h-24 w-24 text-yellow-500"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  
+                                    stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round">  
+                                    <path d="M20.24 12.24a6 6 0 0 0-8.49-8.49L5 10.5V19h8.5z" />  
+                                        <line x1="16" y1="8" x2="2" y2="22" />  <line x1="17.5" y1="15" x2="9" y2="15" />
+                                    </svg>
+                                </div>
+                                <div class="flex-grow text-white">
+                                    <dd class="leading-relaxed text-sm text-left">
+                                       <strong class="text-pink-500">Optimizacion y rendimiento.</strong> 
+                                       Configuracion y optimizacion del codigo para hacer que tu web vuele y cargue en menos de un parpadeo. Fundamental para que tus visitas permanezcan en tu web.
+                                    </dd>
+                                </div>
+                            </div>
+                            <!-- columna 3 -->
+                            <div class="rounded-xl bg-white flex flex-col p-8">
+                                <div
+                                    class="w-16 h-16 inline-flex items-center justify-center rounded-full bg-blue-100/50 mb-5 flex-shrink-0 p-4 cursor-pointer">
+                                    <svg class="h-24 w-24 text-yellow-500"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  
+                                        stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round">  
+                                        <circle cx="12" cy="12" r="10" />  <circle cx="12" cy="12" r="4" />  
+                                        <line x1="4.93" y1="4.93" x2="9.17" y2="9.17" />  <line x1="14.83" y1="14.83" x2="19.07" y2="19.07" />  
+                                        <line x1="14.83" y1="9.17" x2="19.07" y2="4.93" />  <line x1="14.83" y1="9.17" x2="18.36" y2="5.64" />  
+                                        <line x1="4.93" y1="19.07" x2="9.17" y2="14.83" />
+                                    </svg>
+                                </div>
+                                <div class="flex-grow text-gray-800">
+                                    <dd class="leading-relaxed text-sm text-left">
+                                        <strong class="text-pink-600">Soporte por 2 meses.</strong>   
+                                        Soporte via email durante 60 dias. te ayudo en los primeros 2 meses con tu web.
+                                    </dd>
+                                </div>
+                            </div>
+                            <div class="rounded-xl bg-gray-800 flex flex-col p-8">
+                                <div
+                                    class="w-16 h-16 inline-flex items-center justify-center rounded-full bg-blue-100/20 mb-5 flex-shrink-0 p-4 cursor-pointer">
+                                    <svg class="h-24 w-24 text-yellow-500"  width="24" height="24" viewBox="0 0 24 24" 
+                                        stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">  
+                                        <path stroke="none" d="M0 0h24v24H0z"/>  
+                                        <path d="M15 21h-9a3 3 0 0 1 -3 -3v-1h10v2a2 2 0 0 0 4 0v-14a2 2 0 1 1 2 2h-2m2 -4h-11a3 3 0 0 0 -3 3v11" />  
+                                        <line x1="9" y1="7" x2="13" y2="7" />  <line x1="9" y1="11" x2="13" y2="11" />
+                                    </svg>
+                                </div>
+                                <div class="flex-grow text-white">
+                                    <dd class="leading-relaxed text-sm text-left">  
+                                        <strong class="text-pink-500">Cumplimiento RGD.</strong>                     
+                                        Insercion de textos legales en las paginas de politica de privacidad, politica de cookies y aviso legal. Son obligatorios por ley. Te ahorraras multas que van desde los 287.000 a 5.000.000 de pesos.
+                                    </dd>
+                                </div>
+                            </div>
+                            <div class="rounded-xl bg-white flex flex-col p-8">
+                                <div
+                                    class="w-16 h-16 inline-flex items-center justify-center rounded-full bg-blue-100/50 mb-5 flex-shrink-0 p-4 cursor-pointer">
+                                    <svg class="h-24 w-24 text-yellow-500"  width="24" height="24" viewBox="0 0 24 24" 
+                                        stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">  
+                                        <path stroke="none" d="M0 0h24v24H0z"/>  <rect x="13" y="8" width="8" height="12" rx="1" />  
+                                        <path d="M18 8v-3a1 1 0 0 0 -1 -1h-13a1 1 0 0 0 -1 1v12a1 1 0 0 0 1 1h9" />  
+                                        <line x1="16" y1="9" x2="18" y2="9" />
+                                    </svg>
+                                </div>
+                                <div class="flex-grow text-gray-800">
+                                    <dd class="leading-relaxed text-sm text-left">
+                                       <strong class="text-pink-600">Diseño responsivo.</strong> 
+                                       Tu web estara optimizada para visualizarse correctamente en todos los dispositivos. 
+                                    </dd>
+                                </div>
+                            </div>
+                            <!-- columna 4 -->
+                            <div class="rounded-xl bg-gray-800 flex flex-col p-8">
+                                <div
+                                    class="w-16 h-16 inline-flex items-center justify-center rounded-full bg-blue-100/20 mb-5 flex-shrink-0 p-4 cursor-pointer">
+                                    <svg class="w-24 h-24 text-yellow-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" 
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" 
+                                             d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4">
+                                        </path>
+                                    </svg>
+                                </div>
+                                <div class="flex-grow text-white">
+                                    <dd class="leading-relaxed text-sm text-left">
+                                        <strong class="text-pink-500">Minimalista.</strong> 
+                                        Codigo limpio, estable y siguiendo las mejores practicas de programacion y maquetacion.
+                                    </dd>
+                                </div>
+                            </div>
+                            <div class="rounded-xl bg-white flex flex-col p-8">
+                                <div
+                                    class="w-16 h-16 inline-flex items-center justify-center rounded-full bg-blue-100/50 mb-5 flex-shrink-0 p-4 cursor-pointer">
+                                    <svg class="w-24 h-24 text-yellow-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" 
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" 
+                                            d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6">
+                                        </path>
+                                    </svg>
+                                </div>
+                                <div class="flex-grow text-gray-800">
+                                    <dd class="leading-relaxed text-sm text-left">                    
+                                        Una <strong class="text-pink-600">Landing page</strong> vinculada a tu plataforma de email marketing para captar suscriptores.
+                                    </dd>
+                                </div>
+                            </div>
+                            <div class="rounded-xl bg-gray-800 flex flex-col p-8">
+                                <div
+                                    class="w-16 h-16 inline-flex items-center justify-center rounded-full bg-blue-100/20 mb-5 flex-shrink-0 p-4 cursor-pointer">
+                                   
+                                    <svg class="w-24 h-24 text-yellow-500 " fill="none" stroke="currentColor" viewBox="0 0 24 24" 
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" 
+                                             d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z">
+                                        </path>
+                                    </svg>
+                                </div>
+                                <div class="flex-grow text-white">
+                                    <dd class="leading-relaxed text-sm text-left">
+                                       <strong class="text-pink-500">Pagina de contacto</strong> 
+                                       con formulario vinculado a tu email corporativo. 
+                                    </dd>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- seccion lo que no incluye este servicio -->
+        <div class="max-w-full mx-auto p-auto sm:p-6 lg:p-8 bg-gray-50 dark:bg-gray-800">
+            <div class="container flex flex-wrap mx-auto">
+                <div class="w-full text-center">
+                    <div class="border-b lg:border-b-0 p-12">
+                        <h2 class="mt-10 text-4xl leading-8 tracking-tight text-gray-900 sm:text-5xl">
+                            Lo que No incluye este servicio
+                        </h2>
+                        <span class="inline-block h-1 w-10 rounded bg-pink-700/95 mt-8 mb-6"></span>
+                        <p
+                            class="inline-block border border-yellow-500 p-8 sm:p-16 text-base sm:text-2xl leading-loose font-normal text-left text-gray-800 dark:text-gray-300 justify-between mt-8 mb-8">
+                            Es importante que entiendas lo que contratas exactamente. Este servicio es muy completo, pero tiene sus limitaciones. Si despues de leer este listado todavía tienes dudas te recomiendo que eches un vistazo a la sección de preguntas frecuentes que encontraras mas abajo o me envíes un email a <strong class="text-gray-800">info@alejandroloaiza.dev</strong> 
+                        </p>
+                        <dd
+                            class="text-normal sm:text-xl leading-loose font-normal text-left text-gray-800 dark:text-gray-300 justify-between mt-8 mb-8">
+                            <strong class="text-pink-600">Dominio y hosting.</strong> Deben ser de tu propiedad y por tanto debes comprarlo tú. Si no sabes cual elegir te recomiendo <a class="text-blue-600" href="https://www.bluehosting.cl/web-hosting/" target="_blank">Bluehosting</a> , con su plan Emprendedores Power ($38.900CLP Anual+IVA) tendras de sobra para empezar. Mi web y la de mis clientes estan alojadas con ellos y estamos muy satisfechos con la velocidad, seguridad y soporte.
+                        </dd>
+                        <dd
+                            class="text-normal sm:text-xl leading-loose font-normal text-left text-gray-800 dark:text-gray-300 justify-between mt-8 mb-8">
+                           <strong class="text-pink-600">No produzco ni integro contenidos.</strong> No redacto textos, no edito imagenes, no subo entradas ni modifico las paginas. la web se entrega con contenido generico de muestra, tal y como la vez en las demos, luego tu podras personalizarlo todo.
+                        </dd>
+                        <dd
+                            class="text-normal sm:text-xl leading-loose font-normal text-left text-gray-800 dark:text-gray-300 justify-between mt-8 mb-8">
+                            <strong class="text-pink-600">No creo ni configuro tus cuentas externas.</strong> Vinculo tus redes sociales y los formularios de suscripcion, pero las cuentas deben estar creadas y configuradas previamente.
+                        </dd>
+                        <dd
+                            class="text-normal sm:text-xl leading-loose font-normal text-left text-gray-800 dark:text-gray-300 justify-between mt-8 mb-8">
+                            <strong class="text-pink-600">Modificacion del codigo de la plantilla.</strong> Personalizo los colores, tipografias y subo tu logotipo e imagenes, pero no hago mas modificaciones de la plantilla. Una vez entregada la web podrás personalizarla tu mismo si lo necesitas. 
+                        </dd>
+                        <dd
+                            class="text-normal sm:text-xl leading-loose font-normal text-left text-gray-800 dark:text-gray-300 justify-between mt-8 mb-8">
+                            <strong class="text-gray-900">Nota.</strong> Si no tienes conocimientos, te recomiendo que no lo hagas, en ese caso ponte en contacto conmigo, estare dispuesto a ayudarte en lo que necesites. 
+                        </dd>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- seccion nuestros-clientes -->
+
+        <!-- seccion faq - preguntas frecuentes -->
+        <div class="w-full mx-auto p-4 sm:p-6 lg:p-8 py-12 bg-gray-100">
+            <div class="container flex flex-wrap mx-auto">
+                <div class="w-full text-center">
+                    <h2 class="mt-12 text-4xl leading-8 tracking-tight text-gray-900 sm:text-5xl">
+                        FAQ - Preguntas Frecuentes
+                    </h2>
+                    <span class="inline-block h-1 w-10 rounded bg-pink-700 mt-8 mb-8"></span>
+                    <dd class="mt-4 max-w-1xl text-xl text-gray-800 lg:mx-auto">
+                        Aqui te dejo las respuestas a las dudas que me suelen plantear los clientes interesados en este servicio, si despues de leerlas sigues sin tenerlo claro rellena el formulario de contacto y te respondere encantado.
+                    </dd>
+                    
+                    <section class="container px-4 pt-20 pb-24 mx-auto md:px-2">
+                        <div class="grid grid-cols-1 gap-0 text-sm md:grid-cols-2 md:gap-5">
+                          <div>
+                            <div x-data="collapse()" class="px-4 mb-4 bg-gray-100 rounded">
+                              <button
+                                x-spread="trigger"
+                                class="flex items-center justify-start w-full py-4 pr-1 font-bold text-left text-gray-800 outline-none hover:text-primary focus:text-primary focus:outline-none"
+                                role="button"
+                                aria-controls="faq7"
+                                aria-expanded="false"
+                              >
+                                <svg :class="{ 'rotate-90': open }" class="flex-none w-4 h-4 mr-2 transition transform" aria-hidden="true" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                                </svg>
+                                <dl class="text-lg">
+                                    Vale, me interesa este servicio ¿Cuál es el procedimiento a seguir?
+                                </dl>
+                              </button>
+                              <div x-spread="collapse" x-cloak class="pb-5 ml-6 text-gray-700" id="faq7">
+                                  <dd class="text-lg text-left">
+                                    Si estás decidido a contratar este servicio solo tienes que hacer click en cualquiera de los botones de compra que hay a lo largo de esta página y se iniciará el proceso. 
+                                    Una vez abonado el importe de la web te enviaré un email con la información y datos de acceso que necesitaré para hacer la web y en cuanto me los devuelvas me pondré manos a la obra. 
+                                    En <span class="hover:text-pink-700 font-bold">96 horas</span> la tendrás lista.
+                                  </dd>
+                              </div>
+                            </div>
+                            <div x-data="collapse()" class="px-4 mb-4 bg-gray-100 rounded">
+                              <button
+                                x-spread="trigger"
+                                class="flex items-center justify-start w-full py-4 pr-1 font-bold text-left text-gray-800 outline-none hover:text-primary focus:text-primary focus:outline-none"
+                                role="button"
+                                aria-controls="faq8"
+                                aria-expanded="false"
+                              >
+                                <svg :class="{ 'rotate-90': open }" class="flex-none w-4 h-4 mr-2 transition transform" aria-hidden="true" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                                </svg>
+                                <dl class="text-lg">
+                                    No quiero tener que añadir el contenido ¿Puedes hacerlo por mí?
+                                </dl>
+                              </button>
+                              <div x-spread="collapse" x-cloak class="pb-5 ml-6 text-gray-700" id="faq8">
+                                  <dl class="text-lg text-left">
+                                    No con este servicio. Si necesitas algo más personalizado o que me encargue de más tareas de las descritas en el apartado 
+                                    "Qué incluye Tu web en 3 dias" te animo a que consultes mi servicio de diseño web a medida.
+                                  </dl>
+                              </div>
+                            </div>
+                            <div x-data="collapse()" class="px-4 mb-4 bg-gray-100 rounded">
+                              <button
+                                x-spread="trigger"
+                                class="flex items-center justify-start w-full py-4 pr-1 font-bold text-left text-gray-800 outline-none hover:text-primary focus:text-primary focus:outline-none"
+                                role="button"
+                                aria-controls="faq9"
+                                aria-expanded="false"
+                              >
+                                <svg :class="{ 'rotate-90': open }" class="flex-none w-4 h-4 mr-2 transition transform" aria-hidden="true" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                                </svg>
+                                <dl class="text-lg">
+                                    ¿Puedo solicitar mejoras o cambios sobre tu propuesta estándar?
+                                </dl>
+                              </button>
+                              <div x-spread="collapse" x-cloak class="pb-5 ml-6 text-gray-700" id="faq9">
+                                  <dd class="text-lg text-left">
+                                    No. El servicio es tal cual lo presento en las Demos y en las descripciones de esta página, 
+                                    si necesitas un diseño más personalizado quizá te interese mi servicio de diseño web completo. 
+                                    De todas formas, una vez que te entregue la web tu podrás hacer todas las modificaciones y mejoras que consideres.
+                                  </dd>
+                              </div>
+                            </div>
+                            <div x-data="collapse()" class="px-4 mb-4 bg-gray-100 rounded">
+                                <button
+                                  x-spread="trigger"
+                                  class="flex items-center justify-start w-full py-4 pr-1 font-bold text-left text-gray-800 outline-none hover:text-primary focus:text-primary focus:outline-none"
+                                  role="button"
+                                  aria-controls="faq9"
+                                  aria-expanded="false"
+                                >
+                                  <svg :class="{ 'rotate-90': open }" class="flex-none w-4 h-4 mr-2 transition transform" aria-hidden="true" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                                  </svg>
+                                  <dl class="text-lg">
+                                    ¿Que formas de pago aceptas?
+                                  </dl>
+                                </button>
+                                <div x-spread="collapse" x-cloak class="pb-5 ml-6 text-gray-700" id="faq9">
+                                    <dd class="text-lg text-left">
+                                        Tarjeta de credito, debito y Paypal.
+                                    </dd>
+                                </div>
+                              </div>
+                              <div x-data="collapse()" class="px-4 mb-4 bg-gray-100 rounded">
+                                <button
+                                  x-spread="trigger"
+                                  class="flex items-center justify-start w-full py-4 pr-1 font-bold text-left text-gray-800 outline-none hover:text-primary focus:text-primary focus:outline-none"
+                                  role="button"
+                                  aria-controls="faq9"
+                                  aria-expanded="false"
+                                >
+                                  <svg :class="{ 'rotate-90': open }" class="flex-none w-4 h-4 mr-2 transition transform" aria-hidden="true" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                                  </svg>
+                                  <dl class="text-lg">
+                                    ¿De verdad la configuracion y optimizacion es la misma que en tus desarrollos a medida?
+                                  </dl>
+                                </button>
+                                <div x-spread="collapse" x-cloak class="pb-5 ml-6 text-gray-700" id="faq9">
+                                    <dd class="text-lg text-left">
+                                        Así es. La parte técnica es exactamente igual en este servicio y en el de desarrollo web a medida.
+                                    </dd>
+                                    <dd class="text-lg text-left">
+                                        La diferencia de precio radica en que el desarrollo a medida es 100% personalizado, me encargo de la personalización de cada página, 
+                                        modifico el código de la web cuando hace falta y doy soporte telefónico, además de dos horas de consultoría por Skype al finalizar la web.
+                                    </dd>
+                                    <dd class="text-lg text-left">
+                                        Si necesitas un desarrollo más completo o una atención más personalizada que lo que ofrezco aquí te recomiendo mi otro servicio,
+                                        pero si este te encaja puedes contratarlo con la garantía de que tu web va a tener exactamente la misma base que utilizo en desarrollos el triple de caros.
+                                    </dd> 
+                                </div>
+                              </div>
+                          </div>
+                          <div>
+                            <div x-data="collapse()" class="px-4 mb-4 bg-gray-100 rounded">
+                              <button
+                                x-spread="trigger"
+                                class="flex items-center justify-start w-full py-4 pr-1 font-bold text-left text-gray-800 outline-none hover:text-primary focus:text-primary focus:outline-none"
+                                role="button"
+                                aria-controls="faq7"
+                                aria-expanded="false"
+                              >
+                                <svg :class="{ 'rotate-90': open }" class="flex-none w-4 h-4 mr-2 transition transform" aria-hidden="true" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                                </svg>
+                                <dl class="text-lg">
+                                    ¿Cuánto tardará en estar lista la web?
+                                </dl>
+                              </button>
+                              <div x-spread="collapse" x-cloak class="pb-5 ml-6 text-gray-700" id="faq7">
+                                <dd class="text-lg text-left">
+                                    Depende del tiempo que tardes en enviarme la información que necesito, 
+                                    pero una vez que la reciba tu web estará lista en un máximo de 96 horas.
+                                </dd>
+                              </div>
+                            </div>
+                            <div x-data="collapse()" class="px-4 mb-4 bg-gray-100 rounded">
+                              <button
+                                x-spread="trigger"
+                                class="flex items-center justify-start w-full py-4 pr-1 font-bold text-left text-gray-800 outline-none hover:text-primary focus:text-primary focus:outline-none"
+                                role="button"
+                                aria-controls="faq8"
+                                aria-expanded="false"
+                              >
+                                <svg :class="{ 'rotate-90': open }" class="flex-none w-4 h-4 mr-2 transition transform" aria-hidden="true" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                                </svg>
+                                <dl class="text-lg">
+                                    ¿Cómo nos comunicaremos?
+                                </dl>
+                              </button>
+                              <div x-spread="collapse" x-cloak class="pb-5 ml-6 text-gray-700" id="faq8">
+                                <dd class="text-lg text-left">
+                                    Todas las comunicaciones de este servicio se realizarán via email.
+                                </dd>
+                              </div>
+                            </div>
+                            <div x-data="collapse()" class="px-4 mb-4 bg-gray-100 rounded">
+                              <button
+                                x-spread="trigger"
+                                class="flex items-center justify-start w-full py-4 pr-1 font-bold text-left text-gray-800 outline-none hover:text-primary focus:text-primary focus:outline-none"
+                                role="button"
+                                aria-controls="faq9"
+                                aria-expanded="false"
+                              >
+                                <svg :class="{ 'rotate-90': open }" class="flex-none w-4 h-4 mr-2 transition transform" aria-hidden="true" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                                </svg>
+                                <dl class="text-lg">
+                                    ¿Cuándo tengo que abonar la página?
+                                </dl>
+                              </button>
+                              <div x-spread="collapse" x-cloak class="pb-5 ml-6 text-gray-700" id="faq9">
+                                <dd class="text-lg text-left">
+                                    Este servicio lo cobro al completo por adelantado
+                                </dd>
+                              </div>
+                            </div>
+                            <div x-data="collapse()" class="px-4 mb-4 bg-gray-100 rounded">
+                                <button
+                                  x-spread="trigger"
+                                  class="flex items-center justify-start w-full py-4 pr-1 font-bold text-left text-gray-800 outline-none hover:text-primary focus:text-primary focus:outline-none"
+                                  role="button"
+                                  aria-controls="faq9"
+                                  aria-expanded="false"
+                                >
+                                  <svg :class="{ 'rotate-90': open }" class="flex-none w-4 h-4 mr-2 transition transform" aria-hidden="true" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                                  </svg>
+                                  <dl class="text-lg">
+                                    ¿Qué tengo que tener preparado para que empieces con la web?
+                                  </dl>
+                                </button>
+                                <div x-spread="collapse" x-cloak class="pb-5 ml-6 text-gray-700" id="faq9">
+                                    <dd class="text-lg text-left">
+                                        Antes de empezar debes haber comprado el hosting y el dominio.
+                                    </dd>
+                                    <dd class="text-lg text-left">
+                                        Tener las imagenes y textos que desees usar en tu sitio web.
+                                    </dd>
+                                    <dd class="text-lg text-left">
+                                        Además tienes que tener creadas tus cuentas de redes sociales y en el caso de que quieras que te vincule los formularios de suscripción tendrás que tener creada una cuenta en Mailchimp, 
+                                        MailRelay o el proveedor que uses y una lista de suscriptores con la que enlazar los formularios.
+                                    </dd>
+                                    <dd class="text-lg text-left">
+                                        Por último necesitaré la información que te solicitaré cuando abones el servicio.
+                                    </dd> 
+                                </div>
+                            </div>
+                            <div x-data="collapse()" class="px-4 mb-4 bg-gray-100 rounded">
+                                <button
+                                  x-spread="trigger"
+                                  class="flex items-center justify-start w-full py-4 pr-1 font-bold text-left text-gray-800 outline-none hover:text-primary focus:text-primary focus:outline-none"
+                                  role="button"
+                                  aria-controls="faq9"
+                                  aria-expanded="false"
+                                >
+                                  <svg :class="{ 'rotate-90': open }" class="flex-none w-4 h-4 mr-2 transition transform" aria-hidden="true" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                                  </svg>
+                                  <dl class="text-lg">
+                                    ¿Que tipo de garantia tiene este servicio?
+                                  </dl>
+                                </button>
+                                <div x-spread="collapse" x-cloak class="pb-5 ml-6 text-gray-700" id="faq9">
+                                  <dd class="text-lg text-left">
+                                    Tienes garantia de 15 dias una vez que hayas obtenido este servicio.
+                                  </dd>
+                                </div>
+                            </div>
+                          </div>
+                          
+                        </div>
+                    </section>
+
+                </div>
+            </div>
+        </div>
+
+        <!-- seccion aun tienes dudas -->
+        <div class="w-full mx-auto p-4 sm:p-6 lg:p-8 py-12 bg-white">
+            <div class="container flex flex-wrap mx-auto">
+                <div class="w-full text-center">
+                    <h2 class="mt-12 text-4xl leading-8 tracking-tight text-gray-900 sm:text-5xl">
+                        ¿Todavía tienes dudas?
+                    </h2>
+                    <span class="inline-block h-1 w-10 rounded bg-pink-700 mt-6 mb-8"></span>
+                </div>
+            </div>
+
+            <!-- contact form -->
+            <div class="grid grid-flow-col grid-flex-col grid-rows-1 sm:grid-rows-1 sm:grid-cols-1 gap-4">
+                <form class="p-16" method="post">
+                <div class="flex flex-wrap -mx-3 mb-6">
+                  <div class="w-full md:w-1/2 px-3 mb-6 md:mb-0">
+                    <span class="after:content-['*'] after:ml-0.5 after:text-red-500 tracking-wide text-gray-700 text-xs font-bold uppercase mb-2">
+                        Nombre
+                      </span>
+                    </label>
+                    <input class="appearance-none block w-full bg-gray-200 text-gray-700 border border-pink-600 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:border-white focus:bg-white" id="grid-first-name" type="text" placeholder="Tu nombre">
+                    <p class="text-red-600 text-xs italic">Porfavor rellena este campo *</p>
+                  </div>
+                  <div class="w-full md:w-1/2 px-3">
+                    <span class="after:content-['*'] after:ml-0.5 after:text-red-500 tracking-wide text-gray-700 text-xs font-bold uppercase mb-2">
+                        Apellido
+                      </span>
+                    </label>
+                    <input class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-white" id="grid-last-name" type="text" placeholder="Tu apellido">
+                  </div>
+                </div>
+                <div class="flex flex-wrap -mx-3 mb-6">
+                  <div class="w-full px-3">
+                    <label class="block">
+                        <span class="after:content-['*'] after:ml-0.5 after:text-red-500 tracking-wide text-gray-700 text-xs font-bold uppercase mb-2">
+                          Email
+                        </span>
+                        <input type="email" name="email" class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-white" id="grid-email" placeholder="you@example.com" />
+                      </label>
+                  </div>
+                </div>
+                  <div class="flex flex-wrap -mx-3 mb-6">
+                  <div class="w-full px-3">
+                    <span class="after:content-['*'] after:ml-0.5 after:text-red-500 tracking-wide text-gray-700 text-xs font-bold uppercase mb-2">
+                        Mensaje
+                      </span>
+                    <textarea rows="10" class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-4 px-4 mb-3 leading-tight focus:outline-none focus:bg-white">
+                    </textarea>
+                  </div>
+                  <div class="flex justify-between w-full px-3">
+                    <div class="md:flex md:items-center">
+                      <label for="agre" class="block text-gray-500 font-bold">
+                        <input class="mr-2 leading-tight" type="checkbox">
+                        <span class="text-sm">
+                          Acepto la politica de privacidad
+                        </span>
+                      </label>
+                    </div>
+                    <a class="shadow bg-gray-900 hover:bg-gray-200 hover:text-pink-600 border focus:shadow-outline focus:outline-none text-white font-medium py-2 px-6 rounded cursor-pointer" type="submit">
+                      Enviar mensaje
+                    </a>
+                  </div>
+                </div>
+              </form>
+              </div>
+        </div>
+
+        <!-- banner 2 section -->
+        <div class="bg-yellow-400">
+            <div class="text-center w-full mx-auto py-16 px-4 sm:px-8 lg:py-16 lg:px-12 z-12">
+                <dl class="text-4xl text-blue-500 font-extrabold sm:text-5xl">
+                    <span class="block">
+                        Se el primero en solicitar este servicio.
+                    </span>
+                </dl>
+                <div class="lg:mt-0 lg:flex-shrink-0">
+                    <div class="mt-12 inline-flex rounded-md">
+                        <a href="#" class="inline-flex justify-center items-center space-x-2 border font-semibold focus:outline-none px-6 py-4 leading-5 text-sm rounded border-gray-200 bg-gray-200 text-gray-700 hover:text-gray-700 hover:bg-gray-300 hover:border-gray-300 focus:ring focus:ring-gray-500 focus:ring-opacity-25 active:bg-gray-200 mt-5">
+                            <span>Contratar ahora</span>
+                            <svg class="w-6 h-6 text-gray-700" fill="none" stroke="currentColor" viewBox="0 0 24 24" 
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" 
+                                    d="M3 10h18M7 15h1m4 0h1m-7 4h12a3 3 0 003-3V8a3 3 0 00-3-3H6a3 3 0 00-3 3v8a3 3 0 003 3z">
+                                </path>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+   <!-- All components in one -->
+    <script src="https://cdn.jsdelivr.net/npm/kutty@latest/dist/kutty.min.js"></script>
+    <!-- Single component -->
+    <!-- Include AlpineJS first -->
+    <script src="https://cdn.jsdelivr.net/npm/kutty@latest/dist/alpinejs.min.js"></script>
+    <!-- And then the single component -->
+    <script src="https://cdn.jsdelivr.net/npm/kutty@latest/dist/dropdown.min.js"></script>
+
+</body>
+</html>

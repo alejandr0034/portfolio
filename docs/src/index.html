@@ -1,0 +1,1052 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <title>Porfolio</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- tailwind cdn -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="/dist/output.css" rel="stylesheet" />
+  <!-- font awesome cdn -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <!-- Google fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=DotGothic16&family=Sora:wght@100;200;300;400;500;600;700;800&family=Work+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,600;1,700;1,800;1,900&display=swap"
+    rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Hind:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Alex+Brush&display=swap" rel="stylesheet" />
+  <style>
+    h1 {
+      font-family: "Hind", sans-serif;
+      font-weight: 800;
+      line-height: 1.4em;
+      color: #241f33;
+    }
+
+    h2 {
+      font-family: "Sora", serif;
+      font-weight: 600;
+    }
+
+    h3 {
+      font-family: "Hind", sans-serif;
+      font-weight: 900;
+      font-size: 46px;
+      text-decoration: none;
+    }
+
+    h4 {
+      font-family: "Sora", serif;
+      font-weight: 400;
+    }
+
+    h5 {
+      font-family: "Hind", sans-serif;
+      font-weight: 600;
+      color: #241f33;
+      text-decoration: none;
+    }
+
+    h6 {
+      font-family: "Hind", sans-serif;
+      font-weight: 600;
+      color: #241f33;
+      text-decoration: none;
+    }
+
+    .subtitle {
+      font-family: "Alex Brush", cursive;
+    }
+
+    p {
+      font-family: "Work Sans", serif;
+      font-size: 16px;
+    }
+
+    a:hover {
+      color: #4169e1;
+    }
+
+    .font-noto {
+      font-family: "Noto Serif", serif;
+      font-weight: 400;
+      font-size: 28px;
+    }
+  </style>
+</head>
+
+<body class="container-md">
+  <!-- nav menu -->
+  <div class="w-full text-white bg-gray-900 dark-mode:text-gray-200 dark-mode:bg-gray-800">
+    <div x-data="{ open: false }"
+      class="flex flex-col max-w-screen-xl px-4 mx-auto md:items-center md:justify-between md:flex-row md:px-6 lg:px-8">
+      <div class="flex flex-row items-center justify-between">
+        <a href="main.html" class="py-4 font-bold tracking-widest text-white focus:outline-none focus:shadow-outline">
+          <h3 class="text-3xl">
+            alejandroloaiza<span class="text-orange-600">.</span>
+          </h3>
+        </a>
+        <button class="rounded-lg md:hidden focus:outline-none focus:shadow-outline" @click="open = !open">
+          <svg fill="currentColor" viewBox="0 0 20 20" class="w-6 h-6">
+            <path x-show="!open" fill-rule="evenodd"
+              d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM9 15a1 1 0 011-1h6a1 1 0 110 2h-6a1 1 0 01-1-1z"
+              clip-rule="evenodd"></path>
+            <path x-show="open" fill-rule="evenodd"
+              d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
+              clip-rule="evenodd"></path>
+          </svg>
+        </button>
+      </div>
+      <nav :class="{'flex': open, 'hidden': !open}"
+        class="flex-col flex-grow hidden pb-4 md:pb-0 md:flex md:justify-end md:flex-row">
+        <a class="px-4 py-2 mt-2 text-sm font-semibold text-gray-900 bg-gray-200 rounded-lg md:mt-0 hover:text-blue-600 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline"
+          href="#about-me">Sobre mi</a>
+        <a class="px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg md:mt-0 md:ml-4 hover:text-blue-600 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline"
+          href="#why-choose-me">Por que elegirme</a>
+        <a class="px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg md:mt-0 md:ml-4 hover:text-blue-600 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline"
+          href="#services">Servicios</a>
+        <a class="hidden px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg md:mt-0 md:ml-4 hover:text-orange-600 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline"
+          href="">Sobre mi</a>
+        <div @click.away="open = false" class="relative hidden" x-data="{ open: false }">
+          <button @click="open = !open"
+            class="flex flex-row items-center w-full px-4 py-2 mt-2 font-semibold text-left bg-transparent rounded-lg text-normal md:w-auto md:inline md:mt-0 md:ml-4 hover:text-orange-600 focus:text-gray-800 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline">
+            Servicios
+            <svg fill="currentColor" viewBox="0 0 20 20" :class="{'rotate-180': open, 'rotate-0': !open}"
+              class="inline w-4 h-4 mt-1 ml-1 transition-transform duration-200 transform md:-mt-1">
+              <path fill-rule="evenodd"
+                d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                clip-rule="evenodd"></path>
+            </svg>
+          </button>
+          <div x-show="open" x-transition:enter="transition ease-out duration-100"
+            x-transition:enter-start="transform opacity-0 scale-95"
+            x-transition:enter-end="transform opacity-100 scale-100" x-transition:leave="transition ease-in duration-75"
+            x-transition:leave-start="transform opacity-100 scale-100"
+            x-transition:leave-end="transform opacity-0 scale-95"
+            class="absolute right-0 z-30 w-full mt-2 origin-top-right rounded-md shadow-lg md:w-48">
+            <div class="px-2 py-2 bg-white rounded-md shadow dark-mode:bg-gray-700">
+              <a class="block px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg dark-mode:bg-transparent md:mt-0 hover:text-orange-600 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline"
+                href="tu-web-en-96-horas.html" target="_blank">Tu web en 96 horas</a>
+              <a class="block px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg md:mt-0 hover:text-orange-600 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline"
+                href="disenoweb.html">Diseño web</a>
+              <a class="block px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg md:mt-0 hover:text-orange-600 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline"
+                href="">Tienda online</a>
+            </div>
+          </div>
+        </div>
+        <a class="px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg md:mt-0 md:ml-4 hover:text-blue-600 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline"
+          href="#contact-me">Contacto</a>
+      </nav>
+    </div>
+  </div>
+
+  <!-- section about me -->
+  <section id="about-me">
+    <div class="max-w-screen-xl px-8 py-16 mx-auto sm:px-6 sm:py-24 lg:py-24 lg:px-8">
+      <div class="max-w-5xl">
+        <a href=""
+          class="absolute z-50 -ml-10 mb-2.5 rounded-md border border-blue-gray-50 bg-blue-gray-50/50 p-1 opacity-0 hover:opacity-100 group-hover:opacity-100">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5"
+            stroke="currentColor" aria-hidden="true" class="pointer-events-none h-3.5 w-3.5 rounded-lg">
+            <path stroke-linecap="round" stroke-linejoin="round"
+              d="M5.25 8.25h15m-16.5 7.5h15m-1.8-13.5l-3.9 19.5m-2.1-19.5l-3.9 19.5"></path>
+          </svg>
+        </a>
+        <h3 class="block ml-auto text-2xl antialiased font-thin tracking-normal text-gray-900">
+          Soy Alejandro Loaiza 👋
+        </h3>
+        <h2 class="mt-4 text-4xl font-normal text-gray-900 sm:text-6xl">
+          Diseño y desarrollo soluciones que
+          <span class="font-semibold text-gray-900 hover:text-blue-500">simplifican</span>
+          la vida de las personas en internet.
+        </h2>
+      </div>
+
+      <div class="grid grid-cols-1 gap-8 mt-8 lg:grid-cols-2 lg:gap-16">
+        <div class="relative overflow-hidden h-80 sm:h-80 lg:h-full">
+          <img alt="Bg-1"
+            src="https://images.unsplash.com/photo-1507238691740-187a5b1d37b8?q=80&w=1510&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+            class="absolute inset-0 object-cover w-full h-full" />
+        </div>
+
+        <div class="sm:py-24">
+          <article class="space-y-4 text-gray-800">
+            <p>
+              Soy un nuevo
+              <span class="font-bold text-blue-600">diseñador web</span> en la
+              ciudad de Osorno, Chile. Me especializo en crear sitios web para
+              empresas y emprendedores.
+            </p>
+
+            <p>
+              He trabajado con agencias de diseño web y publicidad en el
+              pasado, pero he decidido comenzar mi camino como diseñador
+              freelance.
+            </p>
+
+            <p>
+              Mi objetivo es crear experiencias que inspire confianza en sus
+              potenciales clientes, facilitando su experiencia de compra.
+            </p>
+
+            <p>
+              Aunque soy nuevo, tengo un
+              <span class="font-bold hover:text-blue-600">sitio web</span> de
+              muestra que prueba mis habilidades.
+            </p>
+
+            <p class="text-3xl subtitle">AlejandroLoaiza.</p>
+          </article>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- section more about-me -->
+  <section>
+    <div class="max-w-screen-xl px-8 py-8 mx-auto sm:px-6 sm:py-8">
+      <div class="grid grid-cols-1 gap-8 mt-auto lg:grid-cols-2 lg:gap-16">
+        <article class="space-y-4 text-gray-800">
+          <p>
+          <a href=""
+          class="absolute z-50 -ml-10 mb-2.5 rounded-md border border-blue-gray-50 bg-blue-gray-50/50 p-1 opacity-0 hover:opacity-100 group-hover:opacity-100">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5"
+            stroke="currentColor" aria-hidden="true" class="pointer-events-none h-3.5 w-3.5 rounded-lg">
+            <path stroke-linecap="round" stroke-linejoin="round"
+              d="M5.25 8.25h15m-16.5 7.5h15m-1.8-13.5l-3.9 19.5m-2.1-19.5l-3.9 19.5"></path>
+          </svg>
+          </a>
+            Lo primero que debes saber sobre mí es que acabo de empezar mi
+            carrera como diseñador web WordPress realizando sitios webs para
+            negocios y emprendedores en Wordpress y WooCommerce.
+          </p>
+
+          <p>
+            No tengo páginas de referencia que mostrarte, ni testimonios que
+            me pongan por las nubes.
+          </p>
+
+          <p>
+            No me habría costado mucho trabajo hacer dos o tres páginas web
+            gratis a cambio de testimonios, enseñarte webs que en realidad
+            haya hecho otro diseñador, o contarte alguna historia creíble de
+            por que no tengo ejemplos de trabajos previos en mi sitio web, por
+            eso prefiero decirte la verdad.
+          </p>
+
+          <p>
+            Que acabo de empezar. Todos tenemos que empezar por algún sitio.
+            Yo empiezo por aquí.
+          </p>
+
+          <p>
+            Sí para ti esto supone un problema, no se si tiene demasiado
+            sentido que sigas leyendo...
+          </p>
+
+          <p>
+            Eso sí entiendo que quieras saber hasta que punto tengo nivel para
+            hacerme cargo de tu proyecto, por eso he creado una pagina web de
+            muestra en la que podrás ver mi trabajo y la idea que tengo de
+            como debería ser una tienda online.
+          </p>
+
+          <p class="hidden">
+            Más adelante te dejare el enlace para que la veas y saques tus
+            propias conclusiones, pero antes deja que te cuente....
+          </p>
+        </article>
+
+        <div class="relative overflow-hidden h-80 sm:h-80 lg:h-full">
+          <img alt="Bg-2"
+            src="https://images.unsplash.com/photo-1553390774-b4822481c894?q=80&w=1488&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+            class="absolute inset-0 object-cover w-full h-full" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- section more about-me -->
+  <section>
+    <div class="max-w-screen-xl px-8 py-8 mx-auto sm:px-6 sm:py-2 lg:py-auto">
+      <div class="grid grid-cols-1 gap-8 lg:grid-cols-1 lg:gap-16">
+        <div class="lg:py-10">
+          <article class="my-auto space-y-4 text-gray-800">
+            <p>
+              <a href="#"
+              class="absolute z-50 -ml-10 mb-2.5 rounded-md border border-blue-gray-50 bg-blue-gray-50/50 p-1 opacity-0 hover:opacity-100 group-hover:opacity-100">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5"
+                stroke="currentColor" aria-hidden="true" class="pointer-events-none h-3.5 w-3.5 rounded-lg">
+                <path stroke-linecap="round" stroke-linejoin="round"
+                  d="M5.25 8.25h15m-16.5 7.5h15m-1.8-13.5l-3.9 19.5m-2.1-19.5l-3.9 19.5"></path>
+              </svg>
+              </a>
+              Soy Alejandro Loaiza
+              <span class="font-semibold hover:text-blue-500">diseñador web de Osorno</span>, tengo 36 años, nacido y
+              criado en la hermosa ciudad de La
+              Leche y la Carne, Osorno, te conte que soy programador y que
+              hago sitios web, Lo que no sabes que tambien me gusta hacer
+              ciclismo, senderismo y me gustan los gatos, tengo 2 gatos thomas
+              y la negra. ellos son mi vida, tambien alimento a varios
+              callejeritos y les he buscado hogar.
+            </p>
+
+            <p>
+              Tanto asi que tengo una
+              <a href="https://www.latienditadelosgatos.cl" target="_blank" class="font-bold text-blue-600">tienda
+                oline</a>
+              dedicada a la venta de insumos y alimento premium para gatos.
+            </p>
+
+            <p>
+              Otra cosa que no te he contado es que recuerdo que cuando era
+              pequeño me decian MacGyver el mitico personaje de tv de los
+              80-90, ese que acababa con su enemigo con lo que tuviera a mano,
+              asi como MacGyver siempre busco la manera de salir de las
+              dificultades haciendo uso de mis habilidades y de mi
+              inteligencia.
+            </p>
+
+            <h4 class="text-2xl font-bold text-blue-500 uppercase">
+              Soy Disenador web en Osorno
+            </h4>
+
+            <p>
+              pero lo cierto es que trabajo con clientes de cualquier parte de
+              Chile y del mundo desde el ordenador de mi casa.
+            </p>
+
+            <h2 class="text-2xl font-bold text-gray-900">
+              Dejame contarte un secreto
+            </h2>
+
+            <p>
+              Cuando me quedé sin trabajo en la agencia en la cual trabajaba
+              fue una gran alegría porque me lancé a emprender. Me acuedo que
+              mi gente, familiares y amigos, estaban preocupados por mí, pero
+              pocas veces en mi vida he estado tan ilusionado.
+            </p>
+
+            <p>
+              Mi entusiasmo era tan grande aquellos días que mi entorno me
+              miraba extrañado, como si sufriera un trastorno. No sabían que
+              era el espiritu de MacGyver.
+            </p>
+          </article>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <!-- section timeline -->
+  <!-- component -->
+  <div class="hidden bg-white">
+    <div class="max-w-xl p-8 mx-auto">
+      <div class="flow-root">
+        <ul class="-mb-8">
+          <li>
+            <div class="relative pb-8">
+              <span class="absolute top-5 left-5 -ml-px h-full w-0.5 bg-gray-200" aria-hidden="true"></span>
+              <div class="relative flex items-start space-x-3">
+                <div>
+                  <div class="relative px-1">
+                    <div class="flex items-center justify-center w-8 h-8 bg-blue-500 rounded-full ring-8 ring-white">
+                      <svg class="w-5 h-5 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                        stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                          d="M12 6v6m0 0v6m0-6h6m-6 0H6" />
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+                <div class="flex-1 min-w-0 py-0">
+                  <div class="text-gray-500 text-md">
+                    <div>
+                      <a href="#" class="mr-2 font-medium text-gray-900">v3.2.0</a>
+
+                      <a href="#"
+                        class="my-0.5 relative inline-flex items-center bg-white rounded-full border border-gray-300 px-3 py-0.5 text-sm">
+                        <div class="absolute flex items-center justify-center flex-shrink-0">
+                          <span class="h-1.5 w-1.5 rounded-full bg-green-500" aria-hidden="true"></span>
+                        </div>
+                        <div class="ml-3.5 font-medium text-gray-900">
+                          Feature
+                        </div>
+                      </a>
+                    </div>
+                    <span class="text-sm whitespace-nowrap">10h ago</span>
+                  </div>
+                  <div class="mt-2 text-gray-700">
+                    <p>
+                      - Added a user profile page for personalized settings.
+                      <br />
+                      - Implemented a dark mode for improved user experience
+                      at night.
+                      <br />
+                      - Introduced real-time notifications for instant
+                      updates.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li>
+            <div class="relative pb-8">
+              <span class="absolute top-5 left-5 -ml-px h-full w-0.5 bg-gray-200" aria-hidden="true"></span>
+              <div class="relative flex items-start space-x-3">
+                <div>
+                  <div class="relative px-1">
+                    <div class="flex items-center justify-center w-8 h-8 bg-blue-500 rounded-full ring-8 ring-white">
+                      <svg class="w-5 h-5 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                        stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                          d="M12 6v6m0 0v6m0-6h6m-6 0H6" />
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+                <div class="flex-1 min-w-0 py-0">
+                  <div class="text-gray-500 text-md">
+                    <div>
+                      <a href="#" class="mr-2 font-medium text-gray-900">v3.1.0</a>
+
+                      <a href="#"
+                        class="my-0.5 relative inline-flex items-center bg-white rounded-full border border-gray-300 px-3 py-0.5 text-sm">
+                        <div class="absolute flex items-center justify-center flex-shrink-0">
+                          <span class="h-1.5 w-1.5 rounded-full bg-green-500" aria-hidden="true"></span>
+                        </div>
+                        <div class="ml-3.5 font-medium text-gray-900">
+                          Feature
+                        </div>
+                      </a>
+                    </div>
+                    <span class="text-sm whitespace-nowrap">9h ago</span>
+                  </div>
+                  <div class="mt-2 text-gray-700">
+                    <p>
+                      - Improved performance by optimizing database queries.
+                      <br />
+                      - Enhanced security measures to protect user data.
+                      <br />
+                      - Streamlined the user interface for a more intuitive
+                      experience.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </li>
+
+          <li>
+            <div class="relative pb-8">
+              <span class="absolute top-5 left-5 -ml-px h-full w-0.5 bg-gray-200" aria-hidden="true"></span>
+              <div class="relative flex items-start space-x-3">
+                <div>
+                  <div class="relative px-1">
+                    <div class="flex items-center justify-center w-8 h-8 bg-blue-500 rounded-full ring-8 ring-white">
+                      <svg class="w-5 h-5 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                        stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                          d="M12 6v6m0 0v6m0-6h6m-6 0H6" />
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+                <div class="flex-1 min-w-0 py-0">
+                  <div class="text-gray-500 text-md">
+                    <div>
+                      <a href="#" class="mr-2 font-medium text-gray-900">v3.0.10</a>
+
+                      <a href="#"
+                        class="my-0.5 relative inline-flex items-center bg-white rounded-full border border-gray-300 px-3 py-0.5 text-sm">
+                        <div class="absolute flex items-center justify-center flex-shrink-0">
+                          <span class="h-1.5 w-1.5 rounded-full bg-red-500" aria-hidden="true"></span>
+                        </div>
+                        <div class="ml-3.5 font-medium text-gray-900">
+                          Bug
+                        </div>
+                      </a>
+                    </div>
+                    <span class="text-sm whitespace-nowrap">6h ago</span>
+                  </div>
+                  <div class="mt-2 text-gray-700">
+                    <p>
+                      - Resolved a critical issue causing crashes on certain
+                      devices.
+                      <br />
+                      - Fixed a login error that prevented some users from
+                      accessing their accounts.
+                      <br />
+                      - Addressed a display glitch causing text overflow in
+                      long messages.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- section careers -->
+  <section id="why-choose-me" class="text-white bg-gray-50">
+    <div class="max-w-screen-xl px-8 py-8 sm:py-12 sm:px-6 lg:py-24 lg:px-16">
+      <div class="text-center max-w-screen-2xl">
+        <h2 class="text-3xl font-bold sm:text-4xl text-gray-950">
+          Lo que me hace especial
+        </h2>
+
+        <p class="mt-4 text-gray-800">
+          No te engañare asi como tu, yo tambien comenze desde abajo y se lo
+          que es querer salir adelante y el camino que se recorre no es color
+          de rosas, es por eso que no te dare falsas expectativas y solo me
+          limitare a hacer mi trabajo lo mejor posible.
+        </p>
+        <p class="mt-4 text-gray-800">Como te puedo ayudar:</p>
+      </div>
+
+      <div class="grid grid-cols-1 gap-8 mt-8 md:mt-16 md:grid-cols-2 md:gap-12 lg:grid-cols-3">
+        <div class="flex items-start gap-4">
+          <span class="p-4 bg-yellow-300 rounded-lg shrink-0">
+            <svg xmlns="http://www.w3.org/2000/svg" height="1.5em" viewBox="0 0 576 512">
+              <!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+              <path
+                d="M234.7 42.7L197 56.8c-3 1.1-5 4-5 7.2s2 6.1 5 7.2l37.7 14.1L248.8 123c1.1 3 4 5 7.2 5s6.1-2 7.2-5l14.1-37.7L315 71.2c3-1.1 5-4 5-7.2s-2-6.1-5-7.2L277.3 42.7 263.2 5c-1.1-3-4-5-7.2-5s-6.1 2-7.2 5L234.7 42.7zM46.1 395.4c-18.7 18.7-18.7 49.1 0 67.9l34.6 34.6c18.7 18.7 49.1 18.7 67.9 0L529.9 116.5c18.7-18.7 18.7-49.1 0-67.9L495.3 14.1c-18.7-18.7-49.1-18.7-67.9 0L46.1 395.4zM484.6 82.6l-105 105-23.3-23.3 105-105 23.3 23.3zM7.5 117.2C3 118.9 0 123.2 0 128s3 9.1 7.5 10.8L64 160l21.2 56.5c1.7 4.5 6 7.5 10.8 7.5s9.1-3 10.8-7.5L128 160l56.5-21.2c4.5-1.7 7.5-6 7.5-10.8s-3-9.1-7.5-10.8L128 96 106.8 39.5C105.1 35 100.8 32 96 32s-9.1 3-10.8 7.5L64 96 7.5 117.2zm352 256c-4.5 1.7-7.5 6-7.5 10.8s3 9.1 7.5 10.8L416 416l21.2 56.5c1.7 4.5 6 7.5 10.8 7.5s9.1-3 10.8-7.5L480 416l56.5-21.2c4.5-1.7 7.5-6 7.5-10.8s-3-9.1-7.5-10.8L480 352l-21.2-56.5c-1.7-4.5-6-7.5-10.8-7.5s-9.1 3-10.8 7.5L416 352l-56.5 21.2z" />
+            </svg>
+          </span>
+
+          <div>
+            <h2 class="text-lg font-bold text-blue-500">Experiencia</h2>
+
+            <p class="mt-1 text-sm text-gray-900">
+              <span>Aporto toda mi experiencia y habilidad en el diseño. Yo
+                tambien empece desde cero. Conozco de antemano lo que te
+                preocupa y tus limitaciones.</span>
+            </p>
+          </div>
+        </div>
+
+        <div class="flex items-start gap-4">
+          <span class="p-4 bg-yellow-300 rounded-lg shrink-0">
+            <svg xmlns="http://www.w3.org/2000/svg" height="1.5em" viewBox="0 0 512 512">
+              <!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+              <path
+                d="M234.5 5.7c13.9-5 29.1-5 43.1 0l192 68.6C495 83.4 512 107.5 512 134.6V377.4c0 27-17 51.2-42.5 60.3l-192 68.6c-13.9 5-29.1 5-43.1 0l-192-68.6C17 428.6 0 404.5 0 377.4V134.6c0-27 17-51.2 42.5-60.3l192-68.6zM256 66L82.3 128 256 190l173.7-62L256 66zm32 368.6l160-57.1v-188L288 246.6v188z" />
+            </svg>
+          </span>
+
+          <div>
+            <h2 class="text-lg font-bold text-blue-500">Marca personal</h2>
+
+            <p class="mt-1 text-sm text-gray-900">
+              Te ayudo a desarrollar tu marca personal. Importante si deseas
+              ser reconocido en tu sector.
+            </p>
+          </div>
+        </div>
+
+        <div class="flex items-start gap-4">
+          <span class="p-4 bg-yellow-300 rounded-lg shrink-0">
+            <svg xmlns="http://www.w3.org/2000/svg" height="1.5em" viewBox="0 0 512 512">
+              <!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+              <path
+                d="M256 0c4.6 0 9.2 1 13.4 2.9L457.7 82.8c22 9.3 38.4 31 38.3 57.2c-.5 99.2-41.3 280.7-213.6 363.2c-16.7 8-36.1 8-52.8 0C57.3 420.7 16.5 239.2 16 140c-.1-26.2 16.3-47.9 38.3-57.2L242.7 2.9C246.8 1 251.4 0 256 0zm0 66.8V444.8C394 378 431.1 230.1 432 141.4L256 66.8l0 0z" />
+            </svg>
+          </span>
+
+          <div>
+            <h2 class="text-lg font-bold text-blue-500">Confianza</h2>
+
+            <p class="mt-1 text-sm text-gray-900">
+              Te ayudo a transmitir confianza, un requisito fundamental para
+              triunfar en Internet.
+            </p>
+          </div>
+        </div>
+
+        <div class="flex items-start gap-4">
+          <span class="p-4 bg-yellow-300 rounded-lg shrink-0">
+            <svg xmlns="http://www.w3.org/2000/svg" height="1.5em" viewBox="0 0 512 512">
+              <!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+              <path
+                d="M416 208c0 45.9-14.9 88.3-40 122.7L502.6 457.4c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L330.7 376c-34.4 25.2-76.8 40-122.7 40C93.1 416 0 322.9 0 208S93.1 0 208 0S416 93.1 416 208zM208 352a144 144 0 1 0 0-288 144 144 0 1 0 0 288z" />
+            </svg>
+          </span>
+
+          <div>
+            <h2 class="text-lg font-bold text-blue-500">Seo</h2>
+
+            <p class="mt-1 text-sm text-gray-900">
+              Indexo tu sitio web en Google, y optimizo para que aparezcas de
+              las primeras posiciones en los buscadores.
+            </p>
+          </div>
+        </div>
+
+        <div class="flex items-start gap-4">
+          <span class="p-4 bg-yellow-300 rounded-lg shrink-0">
+            <svg xmlns="http://www.w3.org/2000/svg" height="1.5em" viewBox="0 0 384 512">
+              <!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+              <path
+                d="M272 384c9.6-31.9 29.5-59.1 49.2-86.2l0 0c5.2-7.1 10.4-14.2 15.4-21.4c19.8-28.5 31.4-63 31.4-100.3C368 78.8 289.2 0 192 0S16 78.8 16 176c0 37.3 11.6 71.9 31.4 100.3c5 7.2 10.2 14.3 15.4 21.4l0 0c19.8 27.1 39.7 54.4 49.2 86.2H272zM192 512c44.2 0 80-35.8 80-80V416H112v16c0 44.2 35.8 80 80 80zM112 176c0 8.8-7.2 16-16 16s-16-7.2-16-16c0-61.9 50.1-112 112-112c8.8 0 16 7.2 16 16s-7.2 16-16 16c-44.2 0-80 35.8-80 80z" />
+            </svg>
+          </span>
+
+          <div>
+            <h2 class="text-lg font-bold text-blue-500">Ideas</h2>
+
+            <p class="mt-1 text-sm text-gray-900">
+              Te aconsejo con la estrategia a seguir, para que tu negocio sea
+              mas rentable.
+            </p>
+          </div>
+        </div>
+
+        <div class="flex items-start gap-4">
+          <span class="p-4 bg-yellow-300 rounded-lg shrink-0">
+            <svg xmlns="http://www.w3.org/2000/svg" height="1.5em" viewBox="0 0 576 512">
+              <!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+              <path
+                d="M288 32c-80.8 0-145.5 36.8-192.6 80.6C48.6 156 17.3 208 2.5 243.7c-3.3 7.9-3.3 16.7 0 24.6C17.3 304 48.6 356 95.4 399.4C142.5 443.2 207.2 480 288 480s145.5-36.8 192.6-80.6c46.8-43.5 78.1-95.4 93-131.1c3.3-7.9 3.3-16.7 0-24.6c-14.9-35.7-46.2-87.7-93-131.1C433.5 68.8 368.8 32 288 32zM144 256a144 144 0 1 1 288 0 144 144 0 1 1 -288 0zm144-64c0 35.3-28.7 64-64 64c-7.1 0-13.9-1.2-20.3-3.3c-5.5-1.8-11.9 1.6-11.7 7.4c.3 6.9 1.3 13.8 3.2 20.7c13.7 51.2 66.4 81.6 117.6 67.9s81.6-66.4 67.9-117.6c-11.1-41.5-47.8-69.4-88.6-71.1c-5.8-.2-9.2 6.1-7.4 11.7c2.1 6.4 3.3 13.2 3.3 20.3z" />
+            </svg>
+          </span>
+
+          <div>
+            <h2 class="text-lg font-bold text-blue-500">
+              Revision de contenidos
+            </h2>
+
+            <p class="mt-1 text-sm text-gray-900">
+              Reviso tus contenidos para que estos transmitan valores
+              positivos.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="px-8 pb-8 mt-10 container-full lg:px-16 lg:pb-16 lg:mt-auto">
+    <div class="grid grid-cols-1 max-w-7xl">
+      <h3 class="text-xl text-gray-900">
+        Lo que te ofrezco si decides contratarme es una relación de confianza
+        en la que te escucho, opino, asesoro y llevo la contraria si lo creo
+        necesario.
+      </h3>
+    </div>
+  </section>
+
+  <!-- section servicios -->
+  <section id="services" class="bg-gray-200 text-gray-950">
+    <div class="max-w-screen-xl px-8 py-24 mx-auto sm:py-24 sm:px-6 lg:py-24 lg:px-8">
+      <div class="max-w-3xl mx-auto text-center">
+        <h2 class="text-3xl font-bold sm:text-4xl">Esto es lo que hago</h2>
+
+        <p class="mt-5 text-gray-800">
+          Estos son algunos de los servicios que ofresco actualmente y lo que
+          te interesa si deseas contratar alguno te acompañare desde el
+          principio hasta que ya tengas montada la web de tus sueños.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 gap-8 mt-10 md:grid-cols-2 lg:grid-cols-3">
+        <div class="flex flex-col bg-white rounded-3xl">
+          <div class="px-6 py-8 sm:p-10 sm:pb-6">
+            <div class="grid items-center justify-center w-full grid-cols-1 text-left">
+              <div>
+                <h2 class="text-lg font-medium tracking-tighter text-blue-600 lg:text-3xl">
+                  Tu web en 96 horas
+                </h2>
+                <p class="mt-2 text-sm text-gray-500">
+                  Perfecto si recien comienzas en internet y deseas tener tu
+                  sitio web online en poco tiempo.
+                </p>
+              </div>
+              <div class="mt-6">
+                <p>
+                  <span class="text-5xl font-light tracking-tight text-black">
+                    $249.900
+                  </span>
+                  <span class="text-base font-medium text-gray-500">
+                    /unico pago
+                  </span>
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="flex px-6 pb-8 sm:px-8">
+            <a aria-describedby="tier-company"
+              class="flex items-center justify-center w-full px-6 py-2.5 text-center text-white duration-200 bg-black/95 border-2 border-black rounded-full nline-flex hover:bg-transparent hover:border-black hover:text-black focus:outline-none focus-visible:outline-black text-sm focus-visible:ring-black"
+              href="tu-web-en-96-horas.html" target="_blank">
+              Mas información
+            </a>
+          </div>
+        </div>
+
+        <div class="flex flex-col bg-white rounded-3xl">
+          <div class="px-6 py-8 sm:p-10 sm:pb-6">
+            <div class="grid items-center justify-center w-full grid-cols-1 text-left">
+              <div>
+                <h2 class="text-lg font-medium tracking-tighter text-blue-600 lg:text-3xl">
+                  Diseño web profesional
+                </h2>
+                <p class="mt-2 text-sm text-gray-500">
+                  Perfecto si ya tienes un sitio web y no estas conforme con
+                  el diseño.
+                </p>
+              </div>
+              <div class="mt-6">
+                <p>
+                  <span class="text-5xl font-light tracking-tight text-black">
+                    $349.900
+                  </span>
+                  <span class="text-base font-medium text-gray-500">
+                    /desde
+                  </span>
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="flex px-6 pb-8 sm:px-8">
+            <a aria-describedby="tier-company"
+              class="flex items-center justify-center w-full px-6 py-2.5 text-center text-white duration-200 bg-black/95 border-2 border-black rounded-full nline-flex hover:bg-transparent hover:border-black hover:text-black focus:outline-none focus-visible:outline-black text-sm focus-visible:ring-black"
+              href="disenoweb.html" target="_blank">
+              Mas información
+            </a>
+          </div>
+        </div>
+
+        <div class="flex flex-col bg-white rounded-3xl">
+          <div class="px-6 py-8 sm:p-10 sm:pb-6">
+            <div class="grid items-center justify-center w-full grid-cols-1 text-left">
+              <div>
+                <h2 class="text-lg font-medium tracking-tighter text-blue-600 lg:text-3xl">
+                  Diseño tienda online
+                </h2>
+                <p class="mt-2 text-sm text-gray-500">
+                  Perfecto si lo que buscas es ofrecer tus productos en una
+                  tienda online optimizada para la venta.
+                </p>
+              </div>
+              <div class="mt-6">
+                <p>
+                  <span class="text-5xl font-light tracking-tight text-black">
+                    $490.000
+                  </span>
+                  <span class="text-base font-medium text-gray-500">
+                    /desde
+                  </span>
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="flex px-6 pb-8 sm:px-8">
+            <a aria-describedby="tier-company"
+              class="flex items-center justify-center w-full px-6 py-2.5 text-center text-white duration-200 bg-black/95 border-2 border-black rounded-full nline-flex hover:bg-transparent hover:border-black hover:text-black focus:outline-none focus-visible:outline-black text-sm focus-visible:ring-black"
+              href="contacto.html">
+              Cotizar
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="mt-12 text-center">
+        <a href="#"
+          class="inline-block px-12 py-3 text-sm font-medium text-gray-900 transition bg-white border-2 rounded hover:text-white hover:bg-blue-600/90 border-black/95 hover:border-black-500 focus:outline-none focus:ring-black">
+          Ver mas servicios
+        </a>
+      </div>
+    </div>
+  </section>
+  <!-- end section -->
+
+  <!-- contact form -->
+  <div id="contact-me" class="flex items-center justify-start min-h-screen px-8">
+    <div class="w-full max-w-3xl mx-auto">
+      <div class="text-center">
+        <h1 class="text-3xl font-bold sm:text-4xl text-gray-950">Contacto</h1>
+        <p class="mt-3">
+          Escribeme a mi correo hola@alejandroloaiza.com o escribeme un
+          mensaje aqui. Por lo general suelo responder en un plazo de 48 hrs:
+        </p>
+      </div>
+
+      <form action="/submit" class="mt-20" method="post">
+        <!-- This is a working contact form. 
+           Get your free access key from: https://web3forms.com/  -->
+
+        <input type="hidden" name="access_key" value="YOUR_ACCESS_KEY_HERE" />
+        <div class="grid gap-6 sm:grid-cols-2">
+          <div class="relative z-0">
+            <input type="text" name="name"
+              class="peer block w-full appearance-none border-0 border-b border-gray-500 bg-transparent py-2.5 px-0 text-sm text-gray-900 focus:border-blue-600 focus:outline-none focus:ring-0"
+              placeholder=" " />
+            <label
+              class="absolute top-3 -z-10 origin-[0] -translate-y-6 scale-75 transform text-sm text-gray-500 duration-300 peer-placeholder-shown:translate-y-0 peer-placeholder-shown:scale-100 peer-focus:left-0 peer-focus:-translate-y-6 peer-focus:scale-75 peer-focus:text-blue-600 peer-focus:dark:text-blue-500">Tu
+              nombre</label>
+          </div>
+          <div class="relative z-0">
+            <input type="text" name="email"
+              class="peer block w-full appearance-none border-0 border-b border-gray-500 bg-transparent py-2.5 px-0 text-sm text-gray-900 focus:border-blue-600 focus:outline-none focus:ring-0"
+              placeholder=" " />
+            <label
+              class="absolute top-3 -z-10 origin-[0] -translate-y-6 scale-75 transform text-sm text-gray-500 duration-300 peer-placeholder-shown:translate-y-0 peer-placeholder-shown:scale-100 peer-focus:left-0 peer-focus:-translate-y-6 peer-focus:scale-75 peer-focus:text-blue-600 peer-focus:dark:text-blue-500">Tu
+              email</label>
+          </div>
+          <div class="relative z-0 col-span-2">
+            <textarea name="message" rows="5"
+              class="peer block w-full appearance-none border-0 border-b border-gray-500 bg-transparent py-2.5 px-0 text-sm text-gray-900 focus:border-blue-600 focus:outline-none focus:ring-0"
+              placeholder=" "></textarea>
+            <label
+              class="absolute top-3 -z-10 origin-[0] -translate-y-6 scale-75 transform text-sm text-gray-500 duration-300 peer-placeholder-shown:translate-y-0 peer-placeholder-shown:scale-100 peer-focus:left-0 peer-focus:-translate-y-6 peer-focus:scale-75 peer-focus:text-blue-600 peer-focus:dark:text-blue-500">Tu
+              mensaje</label>
+          </div>
+        </div>
+        <button type="submit" class="px-10 py-2 mt-5 text-white bg-black rounded-md">
+          Enviar
+        </button>
+      </form>
+    </div>
+  </div>
+  <!-- end section -->
+
+  <!-- section footer -->
+  <!--
+  Heads up! 👋
+
+  This component comes with some `rtl` classes. Please remove them if they are not needed in your project.
+-->
+
+  <footer class="bg-yellow-200">
+    <div class="max-w-screen-xl px-4 pt-16 pb-6 mx-auto sm:px-6 lg:px-8 lg:pt-24">
+      <div class="grid grid-cols-1 gap-8 lg:grid-cols-3">
+        <div>
+          <div class="flex justify-center text-gray-800 sm:justify-start">
+            <a href="" class="font-bold tracking-widest hover:text-gray-900 focus:outline-none focus:shadow-outline">
+              <h3 class="text-3xl">
+                alejandroloaiza<span class="text-orange-600">.</span>
+              </h3>
+            </a>
+          </div>
+
+          <p class="max-w-md mt-6 leading-relaxed text-center text-gray-500 sm:max-w-xs sm:text-left">
+            Diseño y desarrollo soluciones que simplifican la vida de las
+            personas en internet.
+          </p>
+
+          <ul class="flex justify-center gap-6 mt-8 sm:justify-start md:gap-8">
+            <li>
+              <a href="/" rel="noreferrer" target="_blank" class="text-blue-700 transition hover:text-gray-900/90">
+                <span class="sr-only">Facebook</span>
+                <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                  <path fill-rule="evenodd"
+                    d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z"
+                    clip-rule="evenodd" />
+                </svg>
+              </a>
+            </li>
+
+            <li>
+              <a href="/" rel="noreferrer" target="_blank" class="text-blue-700 transition hover:text-gray-900/90">
+                <span class="sr-only">Instagram</span>
+                <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                  <path fill-rule="evenodd"
+                    d="M12.315 2c2.43 0 2.784.013 3.808.06 1.064.049 1.791.218 2.427.465a4.902 4.902 0 011.772 1.153 4.902 4.902 0 011.153 1.772c.247.636.416 1.363.465 2.427.048 1.067.06 1.407.06 4.123v.08c0 2.643-.012 2.987-.06 4.043-.049 1.064-.218 1.791-.465 2.427a4.902 4.902 0 01-1.153 1.772 4.902 4.902 0 01-1.772 1.153c-.636.247-1.363.416-2.427.465-1.067.048-1.407.06-4.123.06h-.08c-2.643 0-2.987-.012-4.043-.06-1.064-.049-1.791-.218-2.427-.465a4.902 4.902 0 01-1.772-1.153 4.902 4.902 0 01-1.153-1.772c-.247-.636-.416-1.363-.465-2.427-.047-1.024-.06-1.379-.06-3.808v-.63c0-2.43.013-2.784.06-3.808.049-1.064.218-1.791.465-2.427a4.902 4.902 0 011.153-1.772A4.902 4.902 0 015.45 2.525c.636-.247 1.363-.416 2.427-.465C8.901 2.013 9.256 2 11.685 2h.63zm-.081 1.802h-.468c-2.456 0-2.784.011-3.807.058-.975.045-1.504.207-1.857.344-.467.182-.8.398-1.15.748-.35.35-.566.683-.748 1.15-.137.353-.3.882-.344 1.857-.047 1.023-.058 1.351-.058 3.807v.468c0 2.456.011 2.784.058 3.807.045.975.207 1.504.344 1.857.182.466.399.8.748 1.15.35.35.683.566 1.15.748.353.137.882.3 1.857.344 1.054.048 1.37.058 4.041.058h.08c2.597 0 2.917-.01 3.96-.058.976-.045 1.505-.207 1.858-.344.466-.182.8-.398 1.15-.748.35-.35.566-.683.748-1.15.137-.353.3-.882.344-1.857.048-1.055.058-1.37.058-4.041v-.08c0-2.597-.01-2.917-.058-3.96-.045-.976-.207-1.505-.344-1.858a3.097 3.097 0 00-.748-1.15 3.098 3.098 0 00-1.15-.748c-.353-.137-.882-.3-1.857-.344-1.023-.047-1.351-.058-3.807-.058zM12 6.865a5.135 5.135 0 110 10.27 5.135 5.135 0 010-10.27zm0 1.802a3.333 3.333 0 100 6.666 3.333 3.333 0 000-6.666zm5.338-3.205a1.2 1.2 0 110 2.4 1.2 1.2 0 010-2.4z"
+                    clip-rule="evenodd" />
+                </svg>
+              </a>
+            </li>
+
+            <li>
+              <a href="/" rel="noreferrer" target="_blank" class="text-blue-700 transition hover:text-gray-900/90">
+                <span class="sr-only">Twitter</span>
+                <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                  <path
+                    d="M8.29 20.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0022 5.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.072 4.072 0 012.8 9.713v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 012 18.407a11.616 11.616 0 006.29 1.84" />
+                </svg>
+              </a>
+            </li>
+
+            <li>
+              <a href="/" rel="noreferrer" target="_blank" class="text-blue-700 transition hover:text-gray-900/90">
+                <span class="sr-only">GitHub</span>
+                <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                  <path fill-rule="evenodd"
+                    d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"
+                    clip-rule="evenodd" />
+                </svg>
+              </a>
+            </li>
+
+            <li>
+              <a href="/" rel="noreferrer" target="_blank" class="text-blue-700 transition hover:text-gray-900/90">
+                <span class="sr-only">Dribbble</span>
+                <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                  <path fill-rule="evenodd"
+                    d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10c5.51 0 10-4.48 10-10S17.51 2 12 2zm6.605 4.61a8.502 8.502 0 011.93 5.314c-.281-.054-3.101-.629-5.943-.271-.065-.141-.12-.293-.184-.445a25.416 25.416 0 00-.564-1.236c3.145-1.28 4.577-3.124 4.761-3.362zM12 3.475c2.17 0 4.154.813 5.662 2.148-.152.216-1.443 1.941-4.48 3.08-1.399-2.57-2.95-4.675-3.189-5A8.687 8.687 0 0112 3.475zm-3.633.803a53.896 53.896 0 013.167 4.935c-3.992 1.063-7.517 1.04-7.896 1.04a8.581 8.581 0 014.729-5.975zM3.453 12.01v-.26c.37.01 4.512.065 8.775-1.215.25.477.477.965.694 1.453-.109.033-.228.065-.336.098-4.404 1.42-6.747 5.303-6.942 5.629a8.522 8.522 0 01-2.19-5.705zM12 20.547a8.482 8.482 0 01-5.239-1.8c.152-.315 1.888-3.656 6.703-5.337.022-.01.033-.01.054-.022a35.318 35.318 0 011.823 6.475 8.4 8.4 0 01-3.341.684zm4.761-1.465c-.086-.52-.542-3.015-1.659-6.084 2.679-.423 5.022.271 5.314.369a8.468 8.468 0 01-3.655 5.715z"
+                    clip-rule="evenodd" />
+                </svg>
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="grid grid-cols-1 gap-8 sm:grid-cols-2 md:grid-cols-3 lg:col-span-2">
+          <div class="hidden text-center sm:text-left">
+            <p class="text-lg font-medium text-gray-900">Acerca de</p>
+
+            <ul class="mt-8 space-y-4 text-sm">
+              <li>
+                <a class="text-gray-700 transition hover:text-gray-700/75" href="#">
+                  Sobre mi
+                </a>
+              </li>
+            </ul>
+          </div>
+
+          <div class="text-center sm:text-left">
+            <p class="text-lg font-medium text-gray-900">Servicios</p>
+
+            <ul class="mt-8 space-y-4 text-sm">
+              <li>
+                <a class="text-gray-700 transition hover:text-gray-700/75" href="tu-web-en-96-horas.html">
+                  Tu web en 96 horas
+                </a>
+              </li>
+
+              <li>
+                <a class="text-gray-700 transition hover:text-gray-700/75" href="disenoweb.html">
+                  Diseño Web Profesional
+                </a>
+              </li>
+
+              <li>
+                <a class="text-gray-700 transition hover:text-gray-700/75" href="#">
+                  Diseño Tienda online
+                </a>
+              </li>
+
+              <li>
+                <a class="text-gray-700 transition hover:text-gray-700/75" href="#">
+                  Programación a medida
+                </a>
+              </li>
+            </ul>
+          </div>
+
+          <div class="text-center sm:text-left">
+            <p class="text-lg font-medium text-gray-900">Links de interes</p>
+
+            <ul class="mt-8 space-y-4 text-sm">
+              <li>
+                <a class="text-gray-700 transition hover:text-gray-700/75" href="faq.html">
+                  FAQs
+                </a>
+              </li>
+
+              <li>
+                <a class="text-gray-700 transition hover:text-gray-700/75" href="#">
+                  Soporte
+                </a>
+              </li>
+
+              <li>
+                <a class="group flex justify-left gap-1.5 ltr:sm:justify-start rtl:sm:justify-end hidden" href="#">
+                  <span class="text-gray-700 transition group-hover:text-gray-700/75">
+                    Live Chat
+                  </span>
+
+                  <span class="relative flex w-2 h-2">
+                    <span
+                      class="absolute inline-flex w-full h-full bg-teal-400 rounded-full opacity-75 animate-ping"></span>
+                    <span class="relative inline-flex w-2 h-2 bg-teal-500 rounded-full"></span>
+                  </span>
+                </a>
+              </li>
+            </ul>
+          </div>
+
+          <div class="text-center sm:text-left">
+            <p class="text-lg font-medium text-gray-900">Contacto</p>
+
+            <ul class="mt-8 space-y-4 text-sm">
+              <li>
+                <a class="flex items-center justify-center gap-1.5" href="mailto:hola@alejandroloaiza.com">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-gray-900 shrink-0" fill="none"
+                    viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                    <path stroke-linecap="round" stroke-linejoin="round"
+                      d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                  </svg>
+
+                  <span class="flex-1 text-gray-700">hola@alejandroloaiza.com</span>
+                </a>
+              </li>
+
+              <li>
+                <a class="flex items-center justify-center gap-1.5 ltr:sm:justify-start rtl:sm:justify-end" href="/">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-gray-900 shrink-0" fill="none"
+                    viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                    <path stroke-linecap="round" stroke-linejoin="round"
+                      d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                  </svg>
+
+                  <span class="flex-1 text-gray-700">+56 9 8857 0628</span>
+                </a>
+              </li>
+
+              <li class="flex items-start justify-center gap-1.5 ltr:sm:justify-start rtl:sm:justify-end">
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-gray-900 shrink-0" fill="none"
+                  viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                  <path stroke-linecap="round" stroke-linejoin="round"
+                    d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                </svg>
+
+                <address class="-mt-0.5 flex-1 not-italic text-gray-700">
+                  David Rosas 695, Osorno, Chile
+                </address>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="pt-6 mt-12 border-t border-gray-100">
+        <div class="text-center sm:flex sm:justify-between sm:text-left">
+          <p class="text-sm text-gray-500">
+            <span class="block sm:inline">Todos los Derechos Reservados.</span>
+
+            <a class="hidden inline-block text-blue-600 underline transition hover:text-gray-900/90" href="#">
+              Terminos y Condiciones
+            </a>
+
+            <span>&middot;</span>
+
+            <a class="hidden inline-block text-blue-600 underline transition hover:text-gray-900/90" href="#">
+              Politica de Privacidad
+            </a>
+          </p>
+
+          <p class="mt-4 text-sm text-gray-900 sm:order-first sm:mt-0">
+            &copy; 2023 Alejandro Loaiza
+          </p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- end section -->
+
+  <!-- scripts -->
+  <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+</body>
+
+</html>
